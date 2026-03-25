@@ -755,7 +755,6 @@
         window.openPackAction = function(packId) {
             if (isAnimating) return; 
             
-            // PERBAIKAN: Sekarang hanya memblokir jika staf Tukang Breweck benar-benar aktif
             if (state.stream.isLiveMode && state.staff.brewecker > 0 && state.settings.autoBreweck) {
                 showToast("Matikan Auto-Breweck untuk melihat animasi Live Stream!", "error");
                 return;
@@ -1097,6 +1096,7 @@
             if(key === 'autoBreweck' && val && state.stream.isLiveMode) {
                 state.stream.isLiveMode = false; 
                 showToast("Auto-Breweck menyala, Live Stream dimatikan.", "error");
+                updateUI();
             }
             state.settings[key] = val;
             saveGameState();
@@ -1406,6 +1406,20 @@
                     }, 500); 
                 }, 2000); 
             }, 1000); 
+        }
+
+        // ─── HELPER FUNCTIONS ───
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.style.background = type === 'success' ? '#00796B' : '#C62828';
+            toast.innerText = message;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 2800);
         }
 
         window.onload = initGame;
