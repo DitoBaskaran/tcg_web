@@ -785,6 +785,7 @@
             } else {
                 isAnimating = true; 
                 saveGameState();
+                updateUI();
                 renderPackOpening(packConf, pulled);
             }
         }
@@ -939,34 +940,35 @@
         function renderEtalaseGrid() {
             const container = document.getElementById('ui-etalase');
             container.innerHTML = '';
-
+        
             const grouped = {};
             state.myInventory.forEach(item => {
                 const key = item.cardName + (item.grade ? `_G${item.grade}` : '');
                 if(!grouped[key]) grouped[key] = [];
                 grouped[key].push(item);
             });
-
+        
             const uniqueCards = Object.keys(grouped);
-
+        
             if(uniqueCards.length === 0) {
                 container.innerHTML = `<div style="width: 100%; text-align: center; color: rgba(255,255,255,0.3); padding-top: 20px;">Etalase kosong</div>`;
                 return;
             }
-
+        
             uniqueCards.forEach(key => {
                 const groupItems = grouped[key];
                 const qty = groupItems.length;
-                const sampleItem = groupItems; // INI BAGIAN YANG DIPERBAIKI (Ditambah indeks)
+                // PERBAIKAN: Ambil indeks pertama agar sampleItem menjadi objek, bukan array
+                const sampleItem = groupItems; 
                 const cardName = sampleItem.cardName;
                 const grade = sampleItem.grade;
-
+        
                 const cardData = state.cardDatabase.find(c => c.name === cardName);
                 if(!cardData) return;
-
-                let marketPrice = state.marketPrices[cardName];
+        
+                let marketPrice = state.marketPrices[cardName] || 0;
                 if(grade) marketPrice = Math.round(marketPrice * getGradeMultiplier(grade));
-
+        
                 const hasCustom = state.customPrices.hasOwnProperty(key);
                 const priceText = hasCustom ? `$${state.customPrices[key]}` : `$${marketPrice}`;
                 const priceColor = hasCustom ? '#69F0AE' : 'white';
@@ -975,7 +977,7 @@
                 let trendIcon = trend > 0 ? '▲' : (trend < 0 ? '▼' : '▬');
                 let trendColor = trend > 0 ? '#4CAF50' : (trend < 0 ? '#F44336' : '#9E9E9E');
                 let gradeBadge = grade ? `<div class="grade-badge">PSA ${grade}</div>` : '';
-
+        
                 const el = document.createElement('div');
                 el.className = 'etalase-item';
                 el.onclick = () => renderCardActionModal(cardName, grade, qty, key);
@@ -1073,7 +1075,10 @@
                     state.myPacks[id] = (state.myPacks[id] || 0) + 1;
                     showToast(`Paket masuk ke Tas.`, 'success');
                 }
-                saveGameState(); renderGrosirList(); renderTasList();
+                saveGameState();
+                updateUI();
+                renderGrosirList();
+                renderTasList();
             }
         }
 
