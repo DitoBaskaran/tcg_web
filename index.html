@@ -22,10 +22,14 @@
         * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
         body { background-color: var(--bg-main); color: var(--text-light); font-family: var(--font-main); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
         
-        /* ─── LOADING SCREEN ─── */
-        #loading-screen { position: absolute; top:0; left:0; width:100%; height:100%; background: #2C3E50; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1000; }
+        /* ─── LOADING & EVENT SCREEN ─── */
+        #loading-screen { position: absolute; top:0; left:0; width:100%; height:100%; background: #2C3E50; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 5000; }
         .spinner { border: 4px solid rgba(255,193,7,0.3); border-top: 4px solid var(--amber); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 16px; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        #event-screen { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); display: none; flex-direction: column; align-items: center; justify-content: center; z-index: 4000; padding: 20px; text-align: center; animation: popIn 0.5s forwards;}
+        .event-paper { background: #F5F5DC; color: #333; padding: 20px; border-radius: 8px; border: 4px solid #8D6E63; max-width: 320px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .event-title { font-size: 24px; font-weight: bold; font-family: 'Times New Roman', serif; border-bottom: 2px solid #333; margin-bottom: 12px; padding-bottom: 8px; }
 
         /* ─── HEADER ─── */
         .header { background-color: var(--bg-header); padding: 12px 16px; border-bottom: 3px solid var(--amber); box-shadow: 0 4px 10px rgba(0,0,0,0.5); display: flex; justify-content: space-between; align-items: center; z-index: 10; }
@@ -45,7 +49,7 @@
         .main-content { flex: 1; display: flex; flex-direction: column; padding: 8px; overflow: hidden; }
         
         /* TOMBOL AKSI */
-        .action-buttons { display: flex; gap: 4px; margin-bottom: 12px; flex-wrap: wrap; }
+        .action-buttons { display: flex; gap: 4px; margin-bottom: 8px; flex-wrap: wrap; }
         .btn-action { flex: 1; min-width: 20%; padding: 8px 0; border-radius: 8px; border: 2px solid rgba(255,255,255,0.2); font-weight: bold; font-size: 10px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 2px; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
         .btn-action:active { transform: translateY(2px); }
         .btn-grosir { background-color: #1976D2; }
@@ -57,35 +61,32 @@
         .btn-grading { background-color: #FBC02D; color: black; text-shadow: none; border-color: #F57F17; }
         .btn-stream { background-color: #D32F2F; border-color: #FF5252; }
         .btn-stream.active { background-color: #E53935; box-shadow: 0 0 10px #FF5252; }
+        .btn-trade { background-color: #8E24AA; border-color: #AB47BC; }
 
-        /* PELANGGAN */
-        .section-title { font-weight: bold; color: rgba(255,255,255,0.7); margin-bottom: 8px; font-size: 14px; }
-        .customers-container { height: 120px; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
-        .customer-empty { flex: 1; display: flex; justify-content: center; align-items: center; color: #888; font-style: italic; }
-        .customer-card { width: 140px; min-width: 140px; padding: 8px; border-radius: 8px; background: #F5F5DC; border: 2px solid #888; display: flex; flex-direction: column; text-align: center; position: relative; }
+        /* PELANGGAN & ITEM RACK */
+        .section-title { font-weight: bold; color: rgba(255,255,255,0.7); margin-bottom: 4px; font-size: 13px; }
+        .customers-container { height: 110px; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+        .customer-empty { flex: 1; display: flex; justify-content: center; align-items: center; color: #888; font-style: italic; font-size: 12px; }
+        .customer-card { width: 130px; min-width: 130px; padding: 6px; border-radius: 8px; background: #F5F5DC; border: 2px solid #888; display: flex; flex-direction: column; text-align: center; position: relative; }
         .customer-card.sultan { background: #FFECB3; border-color: var(--amber); }
-        .c-name { font-weight: bold; font-size: 12px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .c-name { font-weight: bold; font-size: 11px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .sultan .c-name { color: #E65100; }
-        .c-target { color: #2979FF; font-size: 10px; font-weight: bold; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .c-offer { padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 14px; margin: 0 auto; display: inline-block; }
+        .c-target { color: #2979FF; font-size: 9px; font-weight: bold; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .c-offer { padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 13px; margin: 0 auto; display: inline-block; }
         .c-actions { display: flex; justify-content: space-evenly; margin-top: auto; }
-        .c-btn { padding: 4px 12px; border-radius: 6px; cursor: pointer; color: white; font-weight: bold; }
+        .c-btn { padding: 4px 12px; border-radius: 6px; cursor: pointer; color: white; font-weight: bold; font-size: 11px; }
         .c-btn.reject { background: #F44336; }
         .c-btn.accept { background: #4CAF50; }
 
-        /* ETALASE (SUDAH DIUBAH KE HORIZONTAL OVERFLOW) */
-        .etalase-container {
-            flex: 1;
-            background: #4E342E;
-            border: 4px solid #3E2723;
-            border-radius: 12px;
-            padding: 8px;
-            overflow-x: auto;
-            overflow-y: hidden;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
+        /* RAK BARANG */
+        .item-rack-container { height: 70px; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+        .item-card { width: 100px; min-width: 100px; padding: 4px; border-radius: 6px; background: #37474F; border: 1px solid #546E7A; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+        .item-icon { font-size: 24px; margin-bottom: 2px; }
+        .item-name { font-size: 9px; color: white; font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center;}
+        .item-qty { position: absolute; top: -5px; right: -5px; background: var(--green); color: white; font-size: 9px; padding: 2px 5px; border-radius: 10px; font-weight: bold;}
+
+        /* ETALASE KARTU */
+        .etalase-container { flex: 1; background: #4E342E; border: 4px solid #3E2723; border-radius: 12px; padding: 8px; overflow-x: auto; overflow-y: hidden; display: flex; gap: 10px; align-items: center; margin-top: 4px; }
         .etalase-item { position: relative; border-radius: 8px; overflow: hidden; height: 90%; aspect-ratio: 0.65; cursor: pointer; background: #222; flex-shrink: 0; box-shadow: 0 4px 6px rgba(0,0,0,0.5); border: 1px solid #555;}
         .etalase-item img { width: 100%; height: 100%; object-fit: cover; }
         .etalase-info { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.8); padding: 4px; text-align: center; font-size: 11px; font-weight: bold; color: white; display: flex; justify-content: center; align-items: center; gap: 4px; }
@@ -102,8 +103,8 @@
         .list-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #37474F; }
         .list-icon { width: 40px; height: 40px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-size: 20px; color: white; margin-right: 12px; overflow: hidden;}
         .list-text { flex: 1; }
-        .list-title { font-weight: bold; margin-bottom: 4px; }
-        .list-subtitle { font-size: 12px; color: #A5D6A7; }
+        .list-title { font-weight: bold; margin-bottom: 4px; font-size: 13px;}
+        .list-subtitle { font-size: 11px; color: #A5D6A7; }
         .btn { padding: 8px 16px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; color: white; }
         .btn:disabled { background: #555 !important; cursor: not-allowed; color: #888; }
         
@@ -111,27 +112,15 @@
         input[type="number"]:focus, input[type="text"]:focus { border-color: var(--green); }
         .divider { height: 1px; background: #555; margin: 16px 0; }
         .btn-full { width: 100%; padding: 12px; margin-bottom: 8px; font-size: 14px; }
-
+        
         .setting-row { display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #1A1A1A; border-radius: 8px; margin-bottom: 8px; border: 1px solid #333; }
         .setting-row label { font-size: 14px; font-weight: bold; }
         input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--green); cursor: pointer; }
 
-        /* ─── ANALYTICS CHART STYLES ─── */
-        .stat-box { background: #1A1A1A; padding: 12px; border-radius: 8px; text-align: center; border: 1px solid #333; flex: 1; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5); }
-        .stat-value { font-size: 20px; font-weight: bold; color: var(--green); margin-top: 4px; }
-        .stat-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
-        .top-card-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #333; font-size: 13px; }
-        .top-card-item:last-child { border-bottom: none; }
-        .chart-wrapper { display: flex; align-items: flex-end; gap: 4px; height: 120px; padding: 8px 4px 0 4px; background: #111; border-radius: 8px; margin-top: 8px; border: 1px solid #333; overflow-x: auto; }
-        .chart-bar-container { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; flex: 1; min-width: 25px; }
-        .chart-bar { width: 80%; border-radius: 3px 3px 0 0; transition: height 0.5s ease-out; min-height: 2px; }
-        .chart-val { font-size: 9px; color: #888; margin-bottom: 4px; font-weight: bold; }
-
-        /* TOAST NOTIFIKASI */
+        /* ─── TOAST & STREAM UI ─── */
         #toast-container { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 3000; display: flex; flex-direction: column; gap: 8px; align-items: center; width: 90%; pointer-events: none;}
         .toast { padding: 10px 20px; border-radius: 20px; color: white; font-size: 12px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); animation: fadeinup 0.3s forwards, fadeout 0.3s 2.5s forwards; pointer-events: auto;}
         
-        /* ─── LIVE STREAM UI ─── */
         .stream-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; flex-direction: column; pointer-events: none; z-index: 10; padding: 10px; }
         .stream-header { display: flex; justify-content: space-between; background: rgba(0,0,0,0.6); padding: 6px 12px; border-radius: 20px; backdrop-filter: blur(4px); align-items: center; margin-bottom: auto;}
         .stream-viewers { font-size: 14px; font-weight: bold; color: white; display: flex; align-items: center; gap: 6px;}
@@ -143,36 +132,32 @@
         .super-chat-amount { font-size: 16px; color: #D84315; }
 
         @keyframes slideInLeft { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes fadeinup { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
+        @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
         /* ─── ANIMASI PACK OPENING ─── */
         #pack-opening-modal { background: rgba(0,0,0,0.9); }
         .pack-shake-old { width: 200px; height: 300px; border-radius: 16px; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; font-weight: bold; text-align: center; margin: 0 auto; animation: shake 0.1s infinite alternate; position: relative; overflow: hidden; }
         .pack-wrapper { width: 220px; height: 340px; position: relative; margin: 0 auto; overflow: visible; }
-        .pack-top-crimp { position: absolute; top: 0; left: 0; width: 100%; height: 12%; background: #ddd; border-top-left-radius: 20px; border-top-right-radius: 20px; box-shadow: inset 0 0 10px rgba(0,0,0,0.3); background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 6px), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.1), transparent 50%); display: flex; justify-content: center; align-items: center; transform-origin: 10px 10px; z-index: 5; }
+        .pack-top-crimp { position: absolute; top: 0; left: 0; width: 100%; height: 12%; background: #ddd; border-top-left-radius: 20px; border-top-right-radius: 20px; box-shadow: inset 0 0 10px rgba(0,0,0,0.3); display: flex; justify-content: center; align-items: center; transform-origin: 10px 10px; z-index: 5; }
         .pack-top-crimp::after { content: ""; width: 30px; height: 30px; background: rgba(0,0,0,0.9); border-radius: 50%; box-shadow: inset 0 0 5px rgba(0,0,0,0.5); margin-top: -10px; }
-        .pack-body { width: 100%; height: 100%; border-radius: 12px; overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 24px; font-weight: bold; color: white; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 2px, transparent 2px, transparent 6px); z-index: 1; }
-        .pack-body::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 10%, hsla(0, 100%, 50%, 0.1) 20%, hsla(60, 100%, 50%, 0.1) 30%, hsla(120, 100%, 50%, 0.1) 40%, hsla(180, 100%, 50%, 0.1) 50%, hsla(240, 100%, 50%, 0.1) 60%, hsla(300, 100%, 50%, 0.1) 70%, transparent 80%); animation: holographicShine 3s infinite linear; pointer-events: none; }
+        .pack-body { width: 100%; height: 100%; border-radius: 12px; overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center; z-index: 1; }
         .pack-rip-piece { position: absolute; background: #ddd; width: 15px; height: 15px; top: 10%; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); display: none; }
         .pack-rip-piece.rp1 { left: 10%; clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%); }
         .pack-rip-piece.rp2 { right: 10%; clip-path: polygon(20% 0, 100% 20%, 80% 100%, 0 80%); }
         .pack-flash { width: 300px; height: 300px; background: white; border-radius: 50%; box-shadow: 0 0 100px 100px white; margin: 0 auto; animation: flashScale 0.5s forwards; display: none; }
-        .pack-result { width: 100%; max-width: 100%; height: 100%; max-height: 100%; background: #111; border-radius: 0px; padding: 16px; display: none; flex-direction: column; animation: popIn 0.5s forwards; margin: 0 auto; z-index: 2;}
+        .pack-result { width: 100%; max-width: 100%; height: 100%; background: #111; padding: 16px; display: none; flex-direction: column; animation: popIn 0.5s forwards; margin: 0 auto; z-index: 2;}
         .pack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; overflow-y: auto; height: 100%; flex: 1; margin: 16px 0; align-content: start; padding-bottom: 20px;}
         .pack-card-item { border-radius: 6px; overflow: hidden; background: #222; aspect-ratio: 0.7; }
         .pack-card-item img { width: 100%; height: 100%; object-fit: contain; }
         .pack-card-item.rare-pull { border: 3px solid yellow; box-shadow: 0 0 15px yellow; }
-        
-        /* ─── KEYFRAMES ─── */
-        @keyframes fadeinup { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
-        @keyframes holographicShine { 0% { transform: translateX(-150%) skewX(-30deg); } 100% { transform: translateX(150%) skewX(-30deg); } }
+
         @keyframes shake { from { transform: translateX(-15px); } to { transform: translateX(15px); } }
-        @keyframes ripPackSequence { 0% { transform: translateX(0); overflow: visible; } 10% { transform: translateX(5px); } 20% { transform: translateX(-5px); } 30% { transform: translateX(5px); } 70% { transform: translateX(5px); } 80% { transform: translateX(-5px); } 90% { transform: translateX(5px); } 100% { transform: translateX(0); overflow: visible; } }
+        @keyframes ripPackSequence { 0% { transform: translateX(0); } 10% { transform: translateX(5px); } 20% { transform: translateX(-5px); } 30% { transform: translateX(5px); } 70% { transform: translateX(5px); } 80% { transform: translateX(-5px); } 90% { transform: translateX(5px); } 100% { transform: translateX(0); } }
         @keyframes ripTopPart { 0% { transform: rotate(0) translateY(0) scale(1); opacity: 1; } 40% { transform: rotate(-5deg) translateY(-2px) scale(1); opacity: 1; } 50% { transform: rotate(20deg) translateY(-30px) translateX(-10px) scale(1); opacity: 1; } 60% { transform: rotate(45deg) translateY(-100px) translateX(-30px) scale(1.1); opacity: 0; } 100% { transform: rotate(45deg) translateY(-100px) translateX(-30px) scale(1.1); opacity: 0; } }
-        @keyframes ripBodyShape { 0% { clip-path: polygon(0% 12%, 100% 12%, 100% 100%, 0% 100%); } 50% { clip-path: polygon(0% 12%, 100% 12%, 100% 100%, 0% 100%); } 60% { clip-path: polygon(0 15%, 10% 10%, 20% 17%, 30% 11%, 40% 19%, 50% 12%, 60% 18%, 70% 13%, 80% 21%, 90% 16%, 100% 20%, 100% 100%, 0% 100%); } 100% { clip-path: polygon(0 15%, 10% 10%, 20% 17%, 30% 11%, 40% 19%, 50% 12%, 60% 18%, 70% 13%, 80% 21%, 90% 16%, 100% 20%, 100% 100%, 0% 100%); } }
         @keyframes ripPieceFall { 0% { transform: rotate(0) translateY(0); opacity: 1; } 100% { transform: rotate(360deg) translateY(200px); opacity: 0; } }
         @keyframes flashScale { from { transform: scale(0.5); opacity: 1; } to { transform: scale(3); opacity: 0; } }
-        @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     </style>
 </head>
 <body>
@@ -185,6 +170,14 @@
     <div id="loading-screen">
         <div class="spinner"></div>
         <div id="loading-text" style="color: white;">Menyiapkan Meja Toko...</div>
+    </div>
+
+    <div id="event-screen">
+        <div class="event-paper">
+            <div class="event-title">KORAN HARI INI</div>
+            <div id="event-text" style="font-size: 16px; margin-bottom: 20px;">Berita...</div>
+            <button class="btn btn-full" style="background: var(--blue);" onclick="closeEventScreen()">Lanjut Buka Toko</button>
+        </div>
     </div>
 
     <div class="header">
@@ -204,8 +197,9 @@
 
     <div class="main-content">
         <div class="action-buttons">
-            <div class="btn-action btn-grosir" onclick="openModal('modal-grosir')"><span>🛒</span>Grosir</div>
-            <div class="btn-action btn-tas" onclick="openModal('modal-tas')"><span>🎒</span>Tas</div>
+            <div class="btn-action btn-grosir" onclick="openModal('modal-grosir')"><span>🛒</span>Grosir & Barang</div>
+            <div class="btn-action btn-tas" onclick="openModal('modal-tas')"><span>🎒</span>Tas Card</div>
+            <div class="btn-action btn-trade" onclick="renderTradeInModal()"><span>♻️</span>Trade-In</div>
             <div class="btn-action btn-grading" onclick="renderGradingModal()"><span>🔍</span>Grading</div>
             <div class="btn-action btn-staff" onclick="renderStaffModal()"><span>👥</span>Staff</div>
             <div class="btn-action btn-bank" onclick="renderBankModal()"><span>🏦</span>Bank</div>
@@ -217,79 +211,51 @@
         <div class="section-title">Pelanggan:</div>
         <div class="customers-container" id="ui-customers"></div>
 
-        <div class="section-title" style="margin-top: 12px;">Etalase Toko:</div>
+        <div class="section-title">Rak Barang & Merch:</div>
+        <div class="item-rack-container" id="ui-items"></div>
+
+        <div class="section-title" style="margin-top: 4px;">Etalase Kartu:</div>
         <div class="etalase-container" id="ui-etalase"></div>
     </div>
 
     <div id="toast-container"></div>
 
-    <div class="modal-overlay" id="modal-offline">
-        <div class="modal" style="text-align: center; max-width: 300px;">
-            <div class="modal-header" style="justify-content: center;">🌟 Welcome Back! 🌟</div>
-            <div class="modal-body">
-                <p id="offline-desc">Toko beroperasi otomatis selama X menit.</p>
-                <p id="offline-cashier" style="color: #64FFDA; font-size: 12px; font-style: italic; margin-top: 8px; display: none;">Kasirmu bekerja keras selagi kamu pergi!</p>
-                <div style="font-size: 50px; margin: 16px 0;">💰</div>
-                <h1 style="color: #69F0AE; margin-bottom: 16px;" id="offline-money">+$0</h1>
-                <button class="btn btn-full" style="background: var(--amber); color: black;" onclick="closeModal('modal-offline')">Klaim Pendapatan</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modal-grosir"><div class="modal"><div class="modal-header"><span>Toko Grosir</span><button class="close-btn" onclick="closeModal('modal-grosir')">&times;</button></div><div class="modal-body" id="list-grosir"></div></div></div>
+    <div class="modal-overlay" id="modal-offline"><div class="modal" style="text-align: center; max-width: 300px;"><div class="modal-header" style="justify-content: center;">🌟 Welcome Back! 🌟</div><div class="modal-body"><p id="offline-desc">Toko beroperasi otomatis selama X menit.</p><p id="offline-cashier" style="color: #64FFDA; font-size: 12px; font-style: italic; margin-top: 8px; display: none;">Kasirmu bekerja keras selagi kamu pergi!</p><div style="font-size: 50px; margin: 16px 0;">💰</div><h1 style="color: #69F0AE; margin-bottom: 16px;" id="offline-money">+$0</h1><button class="btn btn-full" style="background: var(--amber); color: black;" onclick="closeModal('modal-offline')">Klaim Pendapatan</button></div></div></div>
+    <div class="modal-overlay" id="modal-grosir"><div class="modal"><div class="modal-header"><span>🛒 Pusat Grosir</span><button class="close-btn" onclick="closeModal('modal-grosir')">&times;</button></div><div class="modal-body" id="list-grosir" style="padding-top: 0;"></div></div></div>
     <div class="modal-overlay" id="modal-tas"><div class="modal"><div class="modal-header"><span>Tas Pack</span><button class="close-btn" onclick="closeModal('modal-tas')">&times;</button></div><div class="modal-body" id="list-tas"></div></div></div>
     <div class="modal-overlay" id="modal-staff"><div class="modal"><div class="modal-header"><span>🏢 Manajemen Staff</span><button class="close-btn" onclick="closeModal('modal-staff')">&times;</button></div><div class="modal-body" style="text-align: center;" id="content-staff"></div></div></div>
     <div class="modal-overlay" id="modal-bank"><div class="modal"><div class="modal-header"><span>🏦 Bank Pokemon</span><button class="close-btn" onclick="closeModal('modal-bank')">&times;</button></div><div class="modal-body" style="text-align: center;" id="content-bank"></div></div></div>
     <div class="modal-overlay" id="modal-analytics"><div class="modal"><div class="modal-header"><span>📊 Analytics Toko</span><button class="close-btn" onclick="closeModal('modal-analytics')">&times;</button></div><div class="modal-body" id="content-analytics" style="padding-bottom: 24px;"></div></div></div>
-    
-    <div class="modal-overlay" id="modal-settings">
-        <div class="modal">
-            <div class="modal-header"><span>⚙️ Pengaturan</span><button class="close-btn" onclick="closeModal('modal-settings')">&times;</button></div>
-            <div class="modal-body" id="content-settings"></div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modal-grading">
-        <div class="modal">
-            <div class="modal-header"><span>🔍 PSA Grading</span><button class="close-btn" onclick="closeModal('modal-grading')">&times;</button></div>
-            <div class="modal-body" id="content-grading"></div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modal-card">
-        <div class="modal">
-            <div class="modal-header" id="card-action-title">Etalase</div>
-            <div class="modal-body">
-                <div style="display: flex; justify-content: space-between; font-size: 12px;">
-                    <span style="color: #888;" id="card-action-base">Harga Dasar: $0</span>
-                    <strong style="color: white;" id="card-action-market">Pasar: $0</strong>
-                </div>
-                <input type="number" id="card-action-input" placeholder="Harga Jual Manual ($)">
-                <button class="btn btn-full" style="background: var(--amber); color: black; margin-top: 16px;" id="btn-set-etalase">Pasang di Etalase</button>
-                <div class="divider"></div>
-                <p style="font-weight: bold; margin-bottom: 8px;">Opsi Obral (Banting Harga):</p>
-                <button class="btn btn-full" style="background: #c62828;" id="btn-sell-quick">Jual Cepat 1x → $0</button>
-                <button class="btn btn-full" style="background: #6A1B9A; display: none;" id="btn-sell-bulk">Jual Semua x0 → $0</button>
-            </div>
-        </div>
-    </div>
-
+    <div class="modal-overlay" id="modal-settings"><div class="modal"><div class="modal-header"><span>⚙️ Pengaturan</span><button class="close-btn" onclick="closeModal('modal-settings')">&times;</button></div><div class="modal-body" id="content-settings"></div></div></div>
+    <div class="modal-overlay" id="modal-grading"><div class="modal"><div class="modal-header"><span>🔍 PSA Grading</span><button class="close-btn" onclick="closeModal('modal-grading')">&times;</button></div><div class="modal-body" id="content-grading"></div></div></div>
+    <div class="modal-overlay" id="modal-trade"><div class="modal"><div class="modal-header"><span>♻️ Mesin Trade-In</span><button class="close-btn" onclick="closeModal('modal-trade')">&times;</button></div><div class="modal-body" id="content-trade"></div></div></div>
+    <div class="modal-overlay" id="modal-card"><div class="modal"><div class="modal-header" id="card-action-title">Etalase</div><div class="modal-body"><div style="display: flex; justify-content: space-between; font-size: 12px;"><span style="color: #888;" id="card-action-base">Harga Dasar: $0</span><strong style="color: white;" id="card-action-market">Pasar: $0</strong></div><input type="number" id="card-action-input" placeholder="Harga Jual Manual ($)"><button class="btn btn-full" style="background: var(--amber); color: black; margin-top: 16px;" id="btn-set-etalase">Pasang di Etalase</button><div class="divider"></div><p style="font-weight: bold; margin-bottom: 8px;">Opsi Obral (Banting Harga):</p><button class="btn btn-full" style="background: #c62828;" id="btn-sell-quick">Jual Cepat 1x → $0</button><button class="btn btn-full" style="background: #6A1B9A; display: none;" id="btn-sell-bulk">Jual Semua x0 → $0</button></div></div></div>
     <div class="modal-overlay" id="pack-opening-modal"></div>
 
     <script>
-        // ─── KONTROL ANIMASI & CHAT ───
         let isAnimating = false;
         let chatInterval = null;
 
-        // ─── DATA & CONSTANTS ───
         const NPC_NAMES = ["Ash", "Misty", "Brock", "Gary", "Jessie", "James"];
         const CHAT_NAMES = ["Zet_12", "PikaBoy", "GachaAddict", "SultanJakarta", "Mamat_R", "CardSniper", "KolektorTua", "Rafi_X"];
         const CHAT_NORMAL = ["Bismillah dapet bagus", "Skip skip", "Hoki nggak nih", "Buka terus bang", "Lanjut!", "Pasti zonk", "Berdoa dulu"];
-        const CHAT_HYPE = ["WAAHHH!!", "GILA HOKI BANGET", "Bikin jadi video short bang!", "Clipper mana clipper!", "Tutor hoki bang", "OMG", "Mauuuu", "Hoki seumur hidup kepake"];
-
+        
         const AVAILABLE_PACKS = [
             { id: 'base', name: 'Base Set', price: 15, apiSetId: 'base1', color: '#1E88E5', img: 'https://asia.pokemon-card.com/id/archive/special/card/s10b/assets/images/hero-pack-1.png' },
             { id: 'fossil', name: 'Fossil Set', price: 25, apiSetId: 'base3', color: '#8D6E63', img: 'https://asia.pokemon-card.com/id/card-img/products/idn_ma3_pillow_img_news.png' }
+        ];
+
+        const AVAILABLE_ITEMS = [
+            { id: 'sleeve', name: 'Sleeve Pelindung', buyPrice: 10, buyQty: 10, sellPrice: 2, icon: '🎴', desc: 'Dibeli otomatis saat ada pelanggan beli kartu mahal.' },
+            { id: 'kopi', name: 'Kopi Dingin', buyPrice: 20, buyQty: 10, sellPrice: 4, icon: '🥤', desc: 'Mengurangi efek marah pelanggan saat tawaran ditolak.' },
+            { id: 'kaos', name: 'Kaos Excl. DBSKRN', buyPrice: 100, buyQty: 5, sellPrice: 35, icon: '👕', desc: 'Apparel streetwear keren! Laku keras buat Sultan.' }
+        ];
+
+        const EVENTS = [
+            { msg: "Turnamen TCG Regional Dimulai! Pelanggan Sultan berdatangan hari ini.", type: "sultan_up" },
+            { msg: "Skandal Kartu Palsu Beredar! Kepercayaan pembeli turun drastis.", type: "crash" },
+            { msg: "Influencer review kartu Jadul! Permintaan pasar naik tiba-tiba.", type: "boom" },
+            { msg: "Pasar hari ini stabil dan tenang. Tidak ada kejadian khusus.", type: "normal" }
         ];
 
         let state = {
@@ -306,13 +272,9 @@
             staff: { marketing: 0, scout: 0, negotiator: 0, brewecker: 0 },
             settings: { sfx: true, music: false, autoBreweck: true },
             stream: { isLiveMode: false, subscribers: 0, channelName: 'DBSKRN' },
-            
-            // CUSTOM API STATE
             apiUrls: { set1: '', set2: '' },
-
-            // GRADING STATE
-            grading: [], 
             
+            grading: [], 
             analytics: { dailyProfit: {}, cardSalesCount: {} },
             priceHistory: {}, 
 
@@ -322,12 +284,13 @@
             marketPrices: {}, 
             marketTrends: {},
             myPacks: { base: 0, fossil: 0 },
-            customPrices: {}
+            myItems: { sleeve: 0, kopi: 0, kaos: 0 }, 
+            customPrices: {},
+            currentEvent: "normal"
         };
 
         let timers = { market: null, rent: null, customer: null };
 
-        // ─── HELPER GRADE MULTIPLIER ───
         function getGradeMultiplier(grade) {
             if(!grade) return 1;
             if(grade === 10) return 5.0;
@@ -335,19 +298,12 @@
             if(grade === 8) return 2.0;
             if(grade === 7) return 1.5;
             if(grade === 6) return 1.0;
-            return 0.5; // 1 - 5 harga turun
+            return 0.5; 
         }
 
-        // ─── AUDIO SYSTEM ───
         function playSound(id) {
             if(!state.settings.sfx) return; 
-            try {
-                const audio = document.getElementById(id);
-                if(audio) {
-                    audio.currentTime = 0;
-                    audio.play().catch(e => {});
-                }
-            } catch(e){}
+            try { const audio = document.getElementById(id); if(audio) { audio.currentTime = 0; audio.play().catch(e => {}); } } catch(e){}
         }
 
         function applyMusicSetting() {
@@ -355,35 +311,22 @@
             bgm.volume = 0.3; 
             if(state.settings.music) {
                 const playPromise = bgm.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        document.body.addEventListener('click', () => {
-                            if(state.settings.music) bgm.play();
-                        }, { once: true });
-                    });
-                }
-            } else {
-                bgm.pause();
-            }
+                if (playPromise !== undefined) playPromise.catch(e => document.body.addEventListener('click', () => { if(state.settings.music) bgm.play(); }, { once: true }));
+            } else { bgm.pause(); }
         }
 
-        // ─── INITIALIZATION ───
         async function initGame() {
             setLoadingText("Memuat Database Toko...");
             loadGameState(); 
             applyMusicSetting();
             await fetchCardsFromAPI();
-            
             startTimers();
             updateUI();
             document.getElementById('loading-screen').style.display = 'none';
         }
 
-        function setLoadingText(text) {
-            document.getElementById('loading-text').innerText = text;
-        }
+        function setLoadingText(text) { document.getElementById('loading-text').innerText = text; }
 
-        // ─── API FETCH & CACHING ───
         async function fetchCardsFromAPI(forceRefresh = false) {
             const savedCardDB = localStorage.getItem('tcgTycoonCardDB');
             if (savedCardDB && !forceRefresh) {
@@ -398,7 +341,6 @@
             try {
                 const url1 = state.apiUrls.set1 || 'https://api.pokemontcg.io/v2/cards?q=set.id:base1';
                 const url2 = state.apiUrls.set2 || 'https://api.pokemontcg.io/v2/cards?q=set.id:base3';
-
                 const responses = await Promise.all([ fetch(url1), fetch(url2) ]);
 
                 let fetched = [];
@@ -411,30 +353,24 @@
                             const rawRarity = item.rarity || 'Common';
                             const setId = item.set.id || 'custom';
 
-                            let rarity = 'Basic';
-                            let baseValue = 5;
-
+                            let rarity = 'Basic'; let baseValue = 5;
                             if (rawRarity.includes('Rare Holo') || rawRarity.includes('Secret')) { rarity = 'Legend'; baseValue = 150; }
                             else if (rawRarity.includes('Rare')) { rarity = 'Super Rare'; baseValue = 50; }
                             else if (rawRarity.includes('Uncommon')) { rarity = 'Rare'; baseValue = 15; }
-
                             if (name === 'Charizard') baseValue = 500;
 
                             fetched.push({ name, rarity, baseValue, imageUrl: image, setId });
                         });
                     }
                 }
-
                 if (fetched.length === 0) throw new Error("Empty Data");
                 
                 localStorage.setItem('tcgTycoonCardDB', JSON.stringify(fetched));
                 applyFetchedData(fetched);
-
             } catch (e) {
                 console.warn(e);
                 setLoadingText("Gagal memuat API. Memuat data cadangan...");
                 await new Promise(r => setTimeout(r, 1000));
-                
                 const fallbackData = [
                     {name: 'Charizard (Copy)', rarity: 'Legend', baseValue: 500, imageUrl: 'https://images.pokemontcg.io/base1/4_hires.png', setId: 'base1'},
                     {name: 'Pikachu (Copy)', rarity: 'Basic', baseValue: 10, imageUrl: 'https://images.pokemontcg.io/base1/58_hires.png', setId: 'base1'},
@@ -454,23 +390,15 @@
                     state.marketPrices[c.name] = c.baseValue;
                     state.marketTrends[c.name] = 0;
                 }
-                if (!state.priceHistory[c.name]) {
-                    state.priceHistory[c.name] = [c.baseValue];
-                }
+                if (!state.priceHistory[c.name]) state.priceHistory[c.name] = [c.baseValue];
             });
             preloadImages(data);
         }
 
         function preloadImages(cards) {
-            cards.forEach(c => {
-                if(c.imageUrl) {
-                    const img = new Image();
-                    img.src = c.imageUrl;
-                }
-            });
+            cards.forEach(c => { if(c.imageUrl) { const img = new Image(); img.src = c.imageUrl; } });
         }
 
-        // ─── SAVE & LOAD ───
         function saveGameState() {
             const dataToSave = {
                 money: state.money, dayCount: state.dayCount, repPoints: state.repPoints, rentCost: state.rentCost,
@@ -478,8 +406,8 @@
                 isBankrupt: state.isBankrupt, hasCashier: state.hasCashier,
                 staff: state.staff, settings: state.settings, stream: state.stream, apiUrls: state.apiUrls, grading: state.grading,
                 analytics: state.analytics, priceHistory: state.priceHistory, 
-                myPacks: state.myPacks, customPrices: state.customPrices, myInventory: state.myInventory,
-                marketPrices: state.marketPrices, marketTrends: state.marketTrends,
+                myPacks: state.myPacks, myItems: state.myItems, customPrices: state.customPrices, myInventory: state.myInventory,
+                marketPrices: state.marketPrices, marketTrends: state.marketTrends, currentEvent: state.currentEvent,
                 lastPlayed: new Date().toISOString()
             };
             localStorage.setItem('tcgTycoonSave', JSON.stringify(dataToSave));
@@ -506,10 +434,11 @@
                     state.stream = data.stream ?? { isLiveMode: false, subscribers: 0, channelName: 'DBSKRN' };
                     state.apiUrls = data.apiUrls ?? { set1: '', set2: '' };
                     state.grading = data.grading ?? [];
+                    state.myItems = data.myItems ?? { sleeve: 0, kopi: 0, kaos: 0 };
+                    state.currentEvent = data.currentEvent ?? "normal";
                     
                     state.analytics = data.analytics ?? { dailyProfit: {}, cardSalesCount: {} };
                     state.priceHistory = data.priceHistory ?? {};
-                    
                     state.myPacks = data.myPacks ?? { base: 0, fossil: 0 };
                     state.customPrices = data.customPrices ?? {};
                     state.myInventory = data.myInventory ?? [];
@@ -517,13 +446,11 @@
                     state.marketTrends = data.marketTrends ?? {};
 
                     if (data.lastPlayed && !state.isBankrupt) {
-                        const lastPlayed = new Date(data.lastPlayed);
-                        const offlineMinutes = Math.floor((new Date() - lastPlayed) / 60000);
+                        const offlineMinutes = Math.floor((new Date() - new Date(data.lastPlayed)) / 60000);
                         if (offlineMinutes > 0) {
                             const multiplier = state.hasCashier ? 5 : 2;
                             const maxEarnings = state.hasCashier ? 2500 : 1000;
                             const earnings = Math.min(offlineMinutes * multiplier, maxEarnings);
-                            
                             if (earnings > 0) {
                                 state.money += earnings;
                                 recordSale("Offline Revenue", earnings, true);
@@ -543,7 +470,6 @@
             openModal('modal-offline');
         }
 
-        // ─── TIMERS & LOGIC ───
         function startTimers() {
             timers.market = setInterval(updateMarketEconomy, 5000);
             timers.rent = setInterval(payRent, 45000);
@@ -552,7 +478,8 @@
 
         function scheduleNextCustomer() {
             if(timers.customer) clearTimeout(timers.customer);
-            let interval = Math.max(2000, 8000 - (state.staff.marketing * 1000));
+            let baseInt = state.currentEvent === "sultan_up" ? 5000 : 8000;
+            let interval = Math.max(2000, baseInt - (state.staff.marketing * 1000));
             timers.customer = setTimeout(() => {
                 spawnCustomer();
                 scheduleNextCustomer();
@@ -562,9 +489,11 @@
         function updateMarketEconomy() {
             if (state.isBankrupt) return;
             state.cardDatabase.forEach(card => {
-                const fluctuation = (Math.random() * 0.4) - 0.2; 
+                let fluctuation = (Math.random() * 0.4) - 0.2; 
+                if(state.currentEvent === "crash") fluctuation -= 0.15;
+                if(state.currentEvent === "boom") fluctuation += 0.2;
+
                 let newPrice = Math.round(state.marketPrices[card.name] + (state.marketPrices[card.name] * fluctuation));
-                
                 const minPrice = Math.max(1, Math.round(card.baseValue * 0.3));
                 const maxPrice = Math.round(card.baseValue * 5);
                 
@@ -572,18 +501,28 @@
                 if(newPrice > maxPrice) newPrice = maxPrice;
 
                 const oldPrice = state.marketPrices[card.name];
-                
                 state.marketTrends[card.name] = newPrice > oldPrice ? 1 : (newPrice < oldPrice ? -1 : 0);
                 state.marketPrices[card.name] = newPrice;
 
                 if (!state.priceHistory[card.name]) state.priceHistory[card.name] = [];
                 state.priceHistory[card.name].push(newPrice);
-                
                 if (state.priceHistory[card.name].length > 20) state.priceHistory[card.name].shift();
             });
             updateUI(); 
             saveGameState(); 
         }
+
+        function generateDailyEvent() {
+            if(Math.random() < 0.3) {
+                const ev = EVENTS[Math.floor(Math.random() * (EVENTS.length - 1))];
+                state.currentEvent = ev.type;
+                document.getElementById('event-text').innerText = ev.msg;
+                document.getElementById('event-screen').style.display = 'flex';
+            } else {
+                state.currentEvent = "normal";
+            }
+        }
+        function closeEventScreen() { document.getElementById('event-screen').style.display = 'none'; }
 
         function payRent() {
             state.dayCount++;
@@ -599,17 +538,11 @@
                 }
             }
 
-            // Hitung mundur Grading
             if(state.grading.length > 0) {
                 let finishedGrading = [];
-                state.grading.forEach(g => {
-                    g.daysLeft--;
-                    if(g.daysLeft <= 0) finishedGrading.push(g);
-                });
+                state.grading.forEach(g => { g.daysLeft--; if(g.daysLeft <= 0) finishedGrading.push(g); });
                 state.grading = state.grading.filter(g => g.daysLeft > 0);
-
                 finishedGrading.forEach(g => {
-                    // Logic Generate Grade 1 - 10
                     let grade = Math.floor(Math.random() * 10) + 1;
                     const roll = Math.random();
                     if(roll < 0.1) grade = 10;
@@ -617,13 +550,13 @@
                     else if(roll < 0.65) grade = 8;
                     else if(roll < 0.8) grade = 7;
                     else grade = Math.floor(Math.random() * 6) + 1;
-
                     state.myInventory.push({ id: state.nextCardId++, cardName: g.cardName, grade: grade });
                     showToast(`🔍 ${g.cardName} kembali dari Grading! Dapat PSA ${grade}!`, 'success');
                     playSound('sfx-tada');
                 });
             }
 
+            generateDailyEvent();
             saveGameState();
         }
 
@@ -631,7 +564,6 @@
             const day = state.dayCount;
             if(!state.analytics.dailyProfit[day]) state.analytics.dailyProfit[day] = 0;
             state.analytics.dailyProfit[day] += price;
-
             if(!isOfflineEvent) {
                 if(!state.analytics.cardSalesCount[cardName]) state.analytics.cardSalesCount[cardName] = 0;
                 state.analytics.cardSalesCount[cardName] += 1;
@@ -643,15 +575,10 @@
             if (state.isBankrupt || state.myInventory.length === 0 || state.customers.length >= maxCustomers) return;
 
             const targetItem = state.myInventory[Math.floor(Math.random() * state.myInventory.length)];
-            
-            // Cek harga dasar pasar dan kalikan grade multiplier jika kartu di-grade
             let marketPrice = state.marketPrices[targetItem.cardName];
-            if(targetItem.grade) {
-                marketPrice = Math.round(marketPrice * getGradeMultiplier(targetItem.grade));
-            }
+            if(targetItem.grade) marketPrice = Math.round(marketPrice * getGradeMultiplier(targetItem.grade));
 
             let npcName = NPC_NAMES[Math.floor(Math.random() * NPC_NAMES.length)];
-            
             const itemKey = targetItem.cardName + (targetItem.grade ? '_G' + targetItem.grade : '');
             const currentPrice = state.customPrices[itemKey] || marketPrice;
 
@@ -660,16 +587,20 @@
             let isSultan = false;
             const cardData = state.cardDatabase.find(c => c.name === targetItem.cardName);
 
-            if (state.repPoints >= 80 && cardData && cardData.rarity === 'Legend' && Math.random() < 0.3) {
+            let sultanChance = state.currentEvent === "sultan_up" ? 0.7 : 0.3;
+            if (state.repPoints >= 80 && cardData && cardData.rarity === 'Legend' && Math.random() < sultanChance) {
                 isSultan = true;
                 npcName = "Sultan " + npcName;
             }
 
-            let baseOffer = currentPrice;
-            if (state.staff.negotiator > 0) {
-                baseOffer = baseOffer * (1 + (state.staff.negotiator * 0.1));
+            if(isSultan && state.myItems.kaos > 0 && Math.random() < 0.5) {
+                state.myItems.kaos--;
+                state.money += 35;
+                showToast(`Sultan borong Kaos DBSKRN! +$35`, 'success');
             }
-            
+
+            let baseOffer = currentPrice;
+            if (state.staff.negotiator > 0) baseOffer = baseOffer * (1 + (state.staff.negotiator * 0.1));
             let offerPrice = Math.round(baseOffer * (Math.random() * 0.2 + 0.9)); 
             if(offerPrice < 1) offerPrice = 1;
 
@@ -693,8 +624,17 @@
         function executeSale(item, npcName, price, isDirectSet = false, byCashier = false) {
             state.money += price;
             state.myInventory = state.myInventory.filter(i => i.id !== item.id);
-            playSound('sfx-coin');
             
+            const cardData = state.cardDatabase.find(c => c.name === item.cardName);
+            if(cardData && (cardData.rarity === 'Legend' || cardData.rarity === 'Super Rare')) {
+                if(state.myItems.sleeve > 0 && Math.random() < 0.5) {
+                    state.myItems.sleeve--;
+                    state.money += 2;
+                    setTimeout(() => showToast(`🛡️ ${npcName} tambah beli Sleeve Pelindung! +$2`, 'success'), 1000);
+                }
+            }
+
+            playSound('sfx-coin');
             recordSale(item.cardName, price);
             
             const itemKey = item.cardName + (item.grade ? '_G' + item.grade : '');
@@ -721,14 +661,18 @@
                 state.myInventory.splice(invIndex, 1);
                 state.customers.splice(npcIndex, 1);
                 state.repPoints = Math.min(100, state.repPoints + 5);
-                playSound('sfx-coin');
 
+                const cardData = state.cardDatabase.find(c => c.name === targetItem.cardName);
+                if(cardData && (cardData.rarity === 'Legend' || cardData.rarity === 'Super Rare') && state.myItems.sleeve > 0 && Math.random() < 0.5) {
+                    state.myItems.sleeve--; state.money += 2;
+                    setTimeout(() => showToast(`🛡️ ${npc.name} tambah beli Sleeve! +$2`, 'success'), 1000);
+                }
+
+                playSound('sfx-coin');
                 recordSale(npc.targetCardName, npc.offerPrice);
 
                 const itemKey = targetItem.cardName + (targetItem.grade ? '_G' + targetItem.grade : '');
-                if (!state.myInventory.some(i => (i.cardName + (i.grade ? '_G'+i.grade : '')) === itemKey)) {
-                    delete state.customPrices[itemKey];
-                }
+                if (!state.myInventory.some(i => (i.cardName + (i.grade ? '_G'+i.grade : '')) === itemKey)) delete state.customPrices[itemKey];
                 saveGameState();
             } else {
                 state.customers.splice(npcIndex, 1);
@@ -737,12 +681,22 @@
         }
 
         function rejectOffer(customerId) {
+            const npcIndex = state.customers.findIndex(c => c.id === customerId);
+            if(npcIndex !== -1) {
+                const npc = state.customers[npcIndex];
+                if(state.myItems.kopi > 0 && Math.random() < 0.6) {
+                    state.myItems.kopi--;
+                    state.money += 4;
+                    showToast(`🥤 ${npc.name} kecewa tapi beli Kopi Dingin! +$4 (Reputasi Aman)`, 'success');
+                    playSound('sfx-coin');
+                } else {
+                    state.repPoints = Math.max(0, state.repPoints - 2);
+                }
+            }
             state.customers = state.customers.filter(c => c.id !== customerId);
-            state.repPoints = Math.max(0, state.repPoints - 2);
             saveGameState();
         }
 
-        // ─── STREAMING & GACHA LOGIC ───
         function toggleStreamMode() {
             if (state.staff.brewecker > 0 && state.settings.autoBreweck) {
                 showToast("Matikan Auto-Breweck di Setting untuk bisa Live Stream!", "error");
@@ -789,7 +743,6 @@
 
             let rand = Math.random() * 100;
             if(state.staff.scout > 0) rand = Math.min(99.9, rand + (state.staff.scout * 4));
-
             const pickRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
             if (guaranteedRare) {
@@ -808,10 +761,8 @@
 
         window.openPackAction = function(packId) {
             if (isAnimating) return; 
-            
             if (state.stream.isLiveMode && state.staff.brewecker > 0 && state.settings.autoBreweck) {
-                showToast("Matikan Auto-Breweck untuk melihat animasi Live Stream!", "error");
-                return;
+                showToast("Matikan Auto-Breweck untuk melihat animasi Live Stream!", "error"); return;
             }
             openSpecificPack(packId);
         }
@@ -819,7 +770,6 @@
         function openSpecificPack(packId) {
             const packConf = AVAILABLE_PACKS.find(p => p.id === packId);
             if (!packConf || state.myPacks[packId] <= 0) return;
-
             state.myPacks[packId]--;
 
             let pulled = [];
@@ -827,9 +777,7 @@
             pulled.push(gachaSingleCard(packConf.apiSetId, true));
 
             if (state.staff.brewecker > 0 && state.settings.autoBreweck) {
-                pulled.forEach(card => {
-                    state.myInventory.push({ id: state.nextCardId++, cardName: card.name });
-                });
+                pulled.forEach(card => { state.myInventory.push({ id: state.nextCardId++, cardName: card.name }); });
                 playSound('sfx-tada');
                 showToast(`✂️ Breweck: 10 Kartu ${packConf.name} masuk Etalase!`, 'success');
                 saveGameState();
@@ -841,7 +789,52 @@
             }
         }
 
-        // ─── RENDERING UI ───
+        function renderTradeInModal() {
+            const container = document.getElementById('content-trade');
+            const ampas = state.myInventory.filter(i => {
+                const c = state.cardDatabase.find(x => x.name === i.cardName);
+                return c && (c.rarity === 'Basic' || c.rarity === 'Rare') && !i.grade;
+            });
+
+            const canTrade = ampas.length >= 10;
+            let html = `
+                <div style="margin-bottom: 16px; padding: 12px; background: #37474F; border-radius: 8px; text-align: left;">
+                    <p style="font-size: 11px; color: #ccc; margin-bottom: 8px;">Tumbalkan 10 kartu Basic/Rare acak untuk dilebur menjadi 1 Kartu Legend/Super Rare Acak!</p>
+                </div>
+                <div style="text-align:center; padding: 20px; border: 2px dashed #888; border-radius: 8px; margin-bottom: 16px;">
+                    <div style="font-size: 30px; margin-bottom: 8px;">🔥 ${ampas.length} / 10</div>
+                    <div style="font-size: 12px; color: #888;">Kartu Ampas Tersedia</div>
+                </div>
+                <button class="btn btn-full" style="background: ${canTrade ? 'var(--purple)' : '#555'};" ${!canTrade ? 'disabled' : ''} onclick="executeTradeIn()">LEBUR 10 KARTU!</button>
+            `;
+            container.innerHTML = html;
+            openModal('modal-trade');
+        }
+
+        function executeTradeIn() {
+            let ampasIds = [];
+            for(let i=0; i<state.myInventory.length; i++) {
+                const item = state.myInventory[i];
+                const c = state.cardDatabase.find(x => x.name === item.cardName);
+                if(c && (c.rarity === 'Basic' || c.rarity === 'Rare') && !item.grade) {
+                    ampasIds.push(item.id);
+                    if(ampasIds.length === 10) break;
+                }
+            }
+
+            if(ampasIds.length === 10) {
+                state.myInventory = state.myInventory.filter(i => !ampasIds.includes(i.id));
+                const goodCards = state.cardDatabase.filter(c => c.rarity === 'Super Rare' || c.rarity === 'Legend');
+                const reward = goodCards[Math.floor(Math.random() * goodCards.length)] || state.cardDatabase;
+                
+                state.myInventory.push({ id: state.nextCardId++, cardName: reward.name });
+                playSound('sfx-tada');
+                showToast(`🔥 Trade-in sukses! Mendapatkan ${reward.name}!`, 'success');
+                saveGameState();
+                closeModal('modal-trade');
+            }
+        }
+
         function updateUI() {
             document.getElementById('ui-day').innerText = `DAY ${state.dayCount}`;
             document.getElementById('ui-money').innerText = `$${state.money}`;
@@ -854,9 +847,7 @@
             if(state.loanAmount > 0) {
                 document.getElementById('ui-loan').style.display = 'block';
                 document.getElementById('ui-loan').innerText = `Hutang: $${state.loanAmount} (${state.loanDaysLeft} hr)`;
-            } else {
-                document.getElementById('ui-loan').style.display = 'none';
-            }
+            } else { document.getElementById('ui-loan').style.display = 'none'; }
 
             if(state.isBankrupt) {
                 document.getElementById('ui-bankrupt').style.display = 'block';
@@ -880,24 +871,46 @@
                 document.getElementById('ui-stream-stats').style.display = 'none';
             }
 
+            const totalPacks = Object.values(state.myPacks).reduce((a, b) => a + b, 0);
+            const tasBtn = document.querySelector('.btn-tas');
+            if(tasBtn) tasBtn.innerHTML = `<span>🎒</span>Tas Card ${totalPacks > 0 ? `<b style="color:yellow;">(${totalPacks})</b>` : ''}`;
+
             renderCustomersList();
             renderEtalaseGrid();
+            renderRakBarang(); 
             renderGrosirList();
             renderTasList();
+        }
+
+        function renderRakBarang() {
+            const container = document.getElementById('ui-items');
+            container.innerHTML = '';
+            AVAILABLE_ITEMS.forEach(item => {
+                const qty = state.myItems[item.id] || 0;
+                if(qty > 0) {
+                    container.innerHTML += `
+                        <div class="item-card">
+                            <div class="item-qty">${qty}</div>
+                            <div class="item-icon">${item.icon}</div>
+                            <div class="item-name">${item.name}</div>
+                        </div>
+                    `;
+                }
+            });
+            if(container.innerHTML === '') {
+                container.innerHTML = `<div class="customer-empty">Rak Barang Kosong</div>`;
+            }
         }
 
         function renderCustomersList() {
             const container = document.getElementById('ui-customers');
             container.innerHTML = '';
-
             if (state.customers.length === 0) {
                 container.innerHTML = `<div class="customer-empty">${state.isBankrupt ? 'Tidak ada pelanggan (Bangkrut)' : 'Toko sedang sepi...'}</div>`;
                 return;
             }
-
             state.customers.forEach(npc => {
                 const itemKey = npc.targetCardName + (npc.targetGrade ? '_G' + npc.targetGrade : '');
-                
                 let marketPrice = state.marketPrices[npc.targetCardName] || 0;
                 if(npc.targetGrade) marketPrice = Math.round(marketPrice * getGradeMultiplier(npc.targetGrade));
                 
@@ -944,7 +957,7 @@
             uniqueCards.forEach(key => {
                 const groupItems = grouped[key];
                 const qty = groupItems.length;
-                const sampleItem = groupItems;
+                const sampleItem = groupItems; // INI BAGIAN YANG DIPERBAIKI (Ditambah indeks)
                 const cardName = sampleItem.cardName;
                 const grade = sampleItem.grade;
 
@@ -961,7 +974,6 @@
                 const trend = state.marketTrends[cardName] || 0;
                 let trendIcon = trend > 0 ? '▲' : (trend < 0 ? '▼' : '▬');
                 let trendColor = trend > 0 ? '#4CAF50' : (trend < 0 ? '#F44336' : '#9E9E9E');
-                
                 let gradeBadge = grade ? `<div class="grade-badge">PSA ${grade}</div>` : '';
 
                 const el = document.createElement('div');
@@ -980,7 +992,6 @@
             });
         }
 
-        // ─── FITUR GRADING ───
         function renderGradingModal() {
             const container = document.getElementById('content-grading');
             let html = `
@@ -988,117 +999,81 @@
                     <p style="font-size: 11px; color: #ccc; margin-bottom: 8px;">Kirim kartu Rare/Legend ke PSA. Biaya $50. Proses: 2 Hari.<br>Grade 10 (Gem Mint) akan melipatgandakan harga pasar 5x lipat!</p>
                 </div>
             `;
-
-            // Kartu dalam proses
             if(state.grading.length > 0) {
                 html += `<div style="font-weight: bold; margin-bottom: 8px; color: var(--amber);">Dalam Proses:</div>`;
                 state.grading.forEach(g => {
-                    html += `
-                        <div class="list-item" style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; margin-bottom: 4px;">
-                            <div class="list-text">
-                                <div class="list-title" style="font-size: 12px;">${g.cardName}</div>
-                                <div class="list-subtitle" style="color: #FFB300;">⏳ ${g.daysLeft} Hari Lagi</div>
-                            </div>
-                        </div>
-                    `;
+                    html += `<div class="list-item" style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; margin-bottom: 4px;"><div class="list-text"><div class="list-title" style="font-size: 12px;">${g.cardName}</div><div class="list-subtitle" style="color: #FFB300;">⏳ ${g.daysLeft} Hari Lagi</div></div></div>`;
                 });
                 html += `<div class="divider"></div>`;
             }
 
-            // Kartu yang bisa di-grade
             html += `<div style="font-weight: bold; margin-bottom: 8px;">Kartu Tersedia:</div>`;
-            
-            // Filter inventory (hanya yang belum di grade dan rarity Super Rare / Legend)
             const gradeable = state.myInventory.filter(i => !i.grade && state.cardDatabase.some(c => c.name === i.cardName && (c.rarity === 'Legend' || c.rarity === 'Super Rare')));
-            
             if(gradeable.length === 0) {
                 html += `<div style="text-align: center; color: #888; font-style: italic; padding: 20px;">Tidak ada kartu Super Rare/Legend yang belum di-grade.</div>`;
             } else {
                 const grouped = {};
-                gradeable.forEach(item => {
-                    if(!grouped[item.cardName]) grouped[item.cardName] = [];
-                    grouped[item.cardName].push(item);
-                });
-
+                gradeable.forEach(item => { if(!grouped[item.cardName]) grouped[item.cardName] = []; grouped[item.cardName].push(item); });
                 Object.keys(grouped).forEach(cardName => {
                     const qty = grouped[cardName].length;
                     const canAfford = state.money >= 50;
-                    html += `
-                        <div class="list-item" style="border-bottom: 1px solid #333;">
-                            <div class="list-text">
-                                <div class="list-title" style="font-size: 12px;">${cardName} (Tersedia: ${qty})</div>
-                            </div>
-                            <button class="btn" style="background:${canAfford ? 'var(--blue)' : '#555'}; font-size: 10px;" ${!canAfford ? 'disabled' : ''} onclick="sendToGrading('${cardName}')">Kirim ($50)</button>
-                        </div>
-                    `;
+                    html += `<div class="list-item" style="border-bottom: 1px solid #333;"><div class="list-text"><div class="list-title" style="font-size: 12px;">${cardName} (Tersedia: ${qty})</div></div><button class="btn" style="background:${canAfford ? 'var(--blue)' : '#555'}; font-size: 10px;" ${!canAfford ? 'disabled' : ''} onclick="sendToGrading('${cardName}')">Kirim ($50)</button></div>`;
                 });
             }
-
-            container.innerHTML = html;
-            openModal('modal-grading');
+            container.innerHTML = html; openModal('modal-grading');
         }
 
         function sendToGrading(cardName) {
             if(state.money >= 50) {
                 const index = state.myInventory.findIndex(i => i.cardName === cardName && !i.grade);
                 if(index !== -1) {
-                    state.money -= 50;
-                    state.myInventory.splice(index, 1);
+                    state.money -= 50; state.myInventory.splice(index, 1);
                     state.grading.push({ id: Date.now(), cardName: cardName, daysLeft: 2 });
-                    
-                    playSound('sfx-coin');
-                    showToast(`Kartu dikirim ke lembaga Grading! Tunggu 2 hari.`, 'success');
-                    saveGameState();
-                    renderGradingModal(); 
+                    playSound('sfx-coin'); showToast(`Kartu dikirim ke lembaga Grading! Tunggu 2 hari.`, 'success');
+                    saveGameState(); renderGradingModal(); 
                 }
             }
         }
 
-        // ─── GROSIR & TAS ───
         function renderGrosirList() {
             const container = document.getElementById('list-grosir');
-            container.innerHTML = '';
+            container.innerHTML = `<div style="font-weight: bold; margin: 12px 0 8px 0; color: var(--amber);">📦 Paket Kartu</div>`;
             AVAILABLE_PACKS.forEach(pack => {
                 const canBuy = state.money >= pack.price;
                 const packIcon = pack.img ? `<img src="${pack.img}" style="width:100%; height:100%; object-fit:cover;">` : `🛍️`;
-
-                container.innerHTML += `
-                    <div class="list-item">
-                        <div class="list-icon">${packIcon}</div>
-                        <div class="list-text">
-                            <div class="list-title">${pack.name}</div>
-                            <div class="list-subtitle">Harga: $${pack.price}</div>
-                        </div>
-                        <button class="btn" style="background:${pack.color}" ${!canBuy ? 'disabled' : ''} onclick="buyPack('${pack.id}', ${pack.price})">Beli</button>
-                    </div>
-                `;
+                container.innerHTML += `<div class="list-item"><div class="list-icon">${packIcon}</div><div class="list-text"><div class="list-title">${pack.name}</div><div class="list-subtitle">Harga: $${pack.price}</div></div><button class="btn" style="background:${pack.color}" ${!canBuy ? 'disabled' : ''} onclick="buyPack('${pack.id}', ${pack.price})">Beli</button></div>`;
             });
+
+            container.innerHTML += `<div style="font-weight: bold; margin: 16px 0 8px 0; color: var(--green);">🛒 Suplai Barang</div>`;
+            AVAILABLE_ITEMS.forEach(item => {
+                const canBuy = state.money >= item.buyPrice;
+                container.innerHTML += `<div class="list-item"><div class="list-icon" style="background:#333;">${item.icon}</div><div class="list-text"><div class="list-title">${item.name}</div><div class="list-subtitle">$${item.buyPrice} (Isi ${item.buyQty})</div></div><button class="btn" style="background:var(--blue)" ${!canBuy ? 'disabled' : ''} onclick="buyItem('${item.id}', ${item.buyPrice}, ${item.buyQty})">Kulakan</button></div>`;
+            });
+        }
+
+        function buyItem(id, price, qty) {
+            if(state.money >= price) {
+                state.money -= price; state.myItems[id] = (state.myItems[id] || 0) + qty;
+                playSound('sfx-coin'); showToast(`📦 Berhasil kulakan barang!`, 'success');
+                saveGameState(); renderGrosirList();
+            }
         }
 
         function buyPack(id, price) {
             if(state.money >= price) {
                 state.money -= price; 
-                
                 if (state.staff.brewecker > 0 && state.settings.autoBreweck && !state.stream.isLiveMode) {
                     const packConf = AVAILABLE_PACKS.find(p => p.id === id);
                     let pulled = [];
                     for (let i = 0; i < 9; i++) pulled.push(gachaSingleCard(packConf.apiSetId));
                     pulled.push(gachaSingleCard(packConf.apiSetId, true));
-
-                    pulled.forEach(card => {
-                        state.myInventory.push({ id: state.nextCardId++, cardName: card.name });
-                    });
-                    
-                    playSound('sfx-tada');
-                    showToast(`✂️ Breweck: 10 Kartu ${packConf.name} langsung masuk Etalase!`, 'success');
+                    pulled.forEach(card => { state.myInventory.push({ id: state.nextCardId++, cardName: card.name }); });
+                    playSound('sfx-tada'); showToast(`✂️ Breweck: 10 Kartu ${packConf.name} langsung masuk Etalase!`, 'success');
                 } else {
                     state.myPacks[id] = (state.myPacks[id] || 0) + 1;
                     showToast(`Paket masuk ke Tas.`, 'success');
                 }
-                
-                saveGameState();
-                renderGrosirList();
-                renderTasList();
+                saveGameState(); renderGrosirList(); renderTasList();
             }
         }
 
@@ -1108,35 +1083,15 @@
             AVAILABLE_PACKS.forEach(pack => {
                 const qty = state.myPacks[pack.id] || 0;
                 const packIcon = pack.img ? `<img src="${pack.img}" style="width:100%; height:100%; object-fit:cover;">` : `📦`;
-
-                container.innerHTML += `
-                    <div class="list-item">
-                        <div class="list-icon">${packIcon}</div>
-                        <div class="list-text">
-                            <div class="list-title">${pack.name}</div>
-                            <div class="list-subtitle">Dimiliki: ${qty}</div>
-                        </div>
-                        <button class="btn" style="background:var(--green)" ${qty <= 0 ? 'disabled' : ''} onclick="openPackAction('${pack.id}')">Buka</button>
-                    </div>
-                `;
+                container.innerHTML += `<div class="list-item"><div class="list-icon">${packIcon}</div><div class="list-text"><div class="list-title">${pack.name}</div><div class="list-subtitle">Dimiliki: ${qty}</div></div><button class="btn" style="background:var(--green)" ${qty <= 0 ? 'disabled' : ''} onclick="openPackAction('${pack.id}')">Buka</button></div>`;
             });
         }
 
         function renderStaffModal() {
             const container = document.getElementById('content-staff');
-            let html = `
-                <div style="margin-bottom: 16px; padding: 12px; background: #37474F; border-radius: 8px; text-align: left;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                        <strong style="color: var(--amber); font-size: 16px;">🧑‍💼 Kasir</strong>
-                    </div>
-                    <p style="font-size: 11px; color: #ccc; margin-bottom: 8px;">Otomatis melayani pembeli. Antrean tidak akan pernah penuh!</p>
-            `;
-            if(state.hasCashier) {
-                html += `<div style="padding: 8px; background: rgba(0, 150, 136, 0.2); border: 1px solid #009688; border-radius: 4px; color: #64FFDA; font-weight: bold; text-align: center;">✅ Aktif (Gaji: $15/hari)</div>`;
-            } else {
-                const canBuy = state.money >= 500;
-                html += `<button class="btn btn-full" style="background: ${canBuy ? '#009688' : '#555'}; padding: 8px;" ${!canBuy?'disabled':''} onclick="hireStaff()">Rekrut ($500)</button>`;
-            }
+            let html = `<div style="margin-bottom: 16px; padding: 12px; background: #37474F; border-radius: 8px; text-align: left;"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;"><strong style="color: var(--amber); font-size: 16px;">🧑‍💼 Kasir</strong></div><p style="font-size: 11px; color: #ccc; margin-bottom: 8px;">Otomatis melayani pembeli. Antrean tidak akan pernah penuh!</p>`;
+            if(state.hasCashier) { html += `<div style="padding: 8px; background: rgba(0, 150, 136, 0.2); border: 1px solid #009688; border-radius: 4px; color: #64FFDA; font-weight: bold; text-align: center;">✅ Aktif (Gaji: $15/hari)</div>`; } 
+            else { const canBuy = state.money >= 500; html += `<button class="btn btn-full" style="background: ${canBuy ? '#009688' : '#555'}; padding: 8px;" ${!canBuy?'disabled':''} onclick="hireStaff()">Rekrut ($500)</button>`; }
             html += `</div>`;
 
             const staffTypes = [
@@ -1147,63 +1102,24 @@
             ];
 
             staffTypes.forEach(st => {
-                const lvl = state.staff[st.id];
-                let cost = 200 * (lvl + 1);
-                if (st.id === 'brewecker') cost = 300; 
-
-                const isMax = lvl >= st.max;
-                const canBuy = state.money >= cost && !isMax;
-
-                html += `
-                    <div style="margin-bottom: 12px; padding: 12px; background: #2C3E50; border-radius: 8px; text-align: left; border-left: 4px solid var(--blue);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                            <strong style="color: white; font-size: 14px;">${st.name}</strong>
-                            <span style="font-size: 11px; font-weight: bold; background: #111; padding: 2px 6px; border-radius: 4px; color: ${isMax ? 'var(--green)' : 'var(--amber)'};">LVL ${lvl}/${st.max}</span>
-                        </div>
-                        <p style="font-size: 11px; color: #aaa; margin-bottom: 8px;">${st.desc}</p>
-                        ${isMax 
-                            ? `<button class="btn btn-full" style="background: var(--green); padding: 8px;" disabled>⭐ MAX LEVEL</button>`
-                            : `<button class="btn btn-full" style="background: ${canBuy ? 'var(--blue)' : '#555'}; padding: 8px;" ${!canBuy?'disabled':''} onclick="upgradeStaff('${st.id}')">${st.id==='brewecker' ? 'Rekrut' : 'Tingkatkan'} ($${cost})</button>`
-                        }
-                    </div>
-                `;
+                const lvl = state.staff[st.id]; let cost = 200 * (lvl + 1); if (st.id === 'brewecker') cost = 300; 
+                const isMax = lvl >= st.max; const canBuy = state.money >= cost && !isMax;
+                html += `<div style="margin-bottom: 12px; padding: 12px; background: #2C3E50; border-radius: 8px; text-align: left; border-left: 4px solid var(--blue);"><div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;"><strong style="color: white; font-size: 14px;">${st.name}</strong><span style="font-size: 11px; font-weight: bold; background: #111; padding: 2px 6px; border-radius: 4px; color: ${isMax ? 'var(--green)' : 'var(--amber)'};">LVL ${lvl}/${st.max}</span></div><p style="font-size: 11px; color: #aaa; margin-bottom: 8px;">${st.desc}</p>${isMax ? `<button class="btn btn-full" style="background: var(--green); padding: 8px;" disabled>⭐ MAX LEVEL</button>` : `<button class="btn btn-full" style="background: ${canBuy ? 'var(--blue)' : '#555'}; padding: 8px;" ${!canBuy?'disabled':''} onclick="upgradeStaff('${st.id}')">${st.id==='brewecker' ? 'Rekrut' : 'Tingkatkan'} ($${cost})</button>`}</div>`;
             });
-
-            container.innerHTML = html;
-            openModal('modal-staff');
+            container.innerHTML = html; openModal('modal-staff');
         }
 
-        function hireStaff() {
-            if(state.money >= 500) {
-                state.money -= 500;
-                state.hasCashier = true;
-                saveGameState();
-                renderStaffModal();
-                showToast('🧑‍💼 Kasir berhasil direkrut!', 'success');
-            }
-        }
-
+        function hireStaff() { if(state.money >= 500) { state.money -= 500; state.hasCashier = true; saveGameState(); renderStaffModal(); showToast('🧑‍💼 Kasir berhasil direkrut!', 'success'); } }
         function upgradeStaff(type) {
-            const lvl = state.staff[type];
-            let max = 3;
-            if(type === 'brewecker') max = 1;
-
+            const lvl = state.staff[type]; let max = 3; if(type === 'brewecker') max = 1;
             if (lvl >= max) return; 
-
-            let cost = 200 * (lvl + 1);
-            if (type === 'brewecker') cost = 300;
-
+            let cost = 200 * (lvl + 1); if (type === 'brewecker') cost = 300;
             if(state.money >= cost) {
-                state.money -= cost;
-                state.staff[type]++;
+                state.money -= cost; state.staff[type]++;
                 if (type === 'brewecker') state.settings.autoBreweck = true;
-                
-                saveGameState();
-                renderStaffModal(); 
-                
+                saveGameState(); renderStaffModal(); 
                 let typeName = type.charAt(0).toUpperCase() + type.slice(1);
                 if (type === 'brewecker') typeName = 'Tukang Breweck';
-                
                 showToast(`🎉 ${typeName} berhasil di-upgrade!`, 'success');
             }
         }
@@ -1212,186 +1128,80 @@
             const container = document.getElementById('content-settings');
             let breweckToggle = '';
             if (state.staff.brewecker > 0) {
-                breweckToggle = `
-                    <div class="setting-row">
-                        <label>✂️ Auto-Breweck (Skip Animasi)</label>
-                        <input type="checkbox" ${state.settings.autoBreweck ? 'checked' : ''} onchange="toggleSetting('autoBreweck', this.checked)">
-                    </div>
-                `;
+                breweckToggle = `<div class="setting-row"><label>✂️ Auto-Breweck (Skip Animasi)</label><input type="checkbox" ${state.settings.autoBreweck ? 'checked' : ''} onchange="toggleSetting('autoBreweck', this.checked)"></div>`;
             }
-
-            container.innerHTML = `
-                <div style="margin-bottom: 24px;">
-                    <div class="setting-row">
-                        <label>🔊 Efek Suara (SFX)</label>
-                        <input type="checkbox" ${state.settings.sfx ? 'checked' : ''} onchange="toggleSetting('sfx', this.checked)">
-                    </div>
-                    <div class="setting-row">
-                        <label>🎵 Musik Latar (BGM)</label>
-                        <input type="checkbox" ${state.settings.music ? 'checked' : ''} onchange="toggleSetting('music', this.checked)">
-                    </div>
-                    ${breweckToggle}
-                </div>
-                
-                <div style="margin-bottom: 24px; background: #1A1A1A; padding: 12px; border-radius: 8px; border: 1px solid #333;">
-                    <div style="font-weight: bold; margin-bottom: 8px;">🌐 Custom API URL</div>
-                    <div style="font-size: 11px; color: #888; margin-bottom: 8px;">Isi jika ingin mengambil data set lain. Biarkan kosong untuk default.</div>
-                    <input type="text" id="api-set1" placeholder="API Set 1 (Contoh: https://...)" value="${state.apiUrls.set1}">
-                    <input type="text" id="api-set2" placeholder="API Set 2 (Contoh: https://...)" value="${state.apiUrls.set2}">
-                    <button class="btn btn-full" style="background: var(--blue); margin-top: 12px;" onclick="applyCustomAPI()">Load Ulang Database</button>
-                </div>
-
-                <div class="divider"></div>
-                <button class="btn btn-full" style="background: var(--red);" onclick="resetGame()">Hapus & Reset Semua Data</button>
-            `;
+            container.innerHTML = `<div style="margin-bottom: 24px;"><div class="setting-row"><label>🔊 Efek Suara (SFX)</label><input type="checkbox" ${state.settings.sfx ? 'checked' : ''} onchange="toggleSetting('sfx', this.checked)"></div><div class="setting-row"><label>🎵 Musik Latar (BGM)</label><input type="checkbox" ${state.settings.music ? 'checked' : ''} onchange="toggleSetting('music', this.checked)"></div>${breweckToggle}</div><div style="margin-bottom: 24px; background: #1A1A1A; padding: 12px; border-radius: 8px; border: 1px solid #333;"><div style="font-weight: bold; margin-bottom: 8px;">🌐 Custom API URL</div><div style="font-size: 11px; color: #888; margin-bottom: 8px;">Isi jika ingin mengambil data set lain. Biarkan kosong untuk default.</div><input type="text" id="api-set1" placeholder="API Set 1 (Contoh: https://...)" value="${state.apiUrls.set1}"><input type="text" id="api-set2" placeholder="API Set 2 (Contoh: https://...)" value="${state.apiUrls.set2}"><button class="btn btn-full" style="background: var(--blue); margin-top: 12px;" onclick="applyCustomAPI()">Load Ulang Database</button></div><div class="divider"></div><button class="btn btn-full" style="background: var(--red);" onclick="resetGame()">Hapus & Reset Semua Data</button>`;
             openModal('modal-settings');
         }
 
         function applyCustomAPI() {
             state.apiUrls.set1 = document.getElementById('api-set1').value.trim();
             state.apiUrls.set2 = document.getElementById('api-set2').value.trim();
-            saveGameState();
-            
-            closeModal('modal-settings');
+            saveGameState(); closeModal('modal-settings');
             document.getElementById('loading-screen').style.display = 'flex';
-            fetchCardsFromAPI(true).then(() => {
-                document.getElementById('loading-screen').style.display = 'none';
-                showToast("Database API berhasil diperbarui!", "success");
-                updateUI();
-            });
+            fetchCardsFromAPI(true).then(() => { document.getElementById('loading-screen').style.display = 'none'; showToast("Database API berhasil diperbarui!", "success"); updateUI(); });
         }
 
         function toggleSetting(key, val) {
-            if(key === 'autoBreweck' && val && state.stream.isLiveMode) {
-                state.stream.isLiveMode = false; 
-                showToast("Auto-Breweck menyala, Live Stream dimatikan.", "error");
-                updateUI();
-            }
-            state.settings[key] = val;
-            saveGameState();
+            if(key === 'autoBreweck' && val && state.stream.isLiveMode) { state.stream.isLiveMode = false; showToast("Auto-Breweck menyala, Live Stream dimatikan.", "error"); updateUI(); }
+            state.settings[key] = val; saveGameState();
             if (key === 'music') applyMusicSetting();
         }
 
-        function resetGame() {
-            if(confirm("⚠ PERINGATAN KERAS!\n\nYakin ingin menghapus SEMUA uang, kartu, dan staf? Data tidak bisa dikembalikan!")) {
-                localStorage.removeItem('tcgTycoonSave');
-                localStorage.removeItem('tcgTycoonCardDB'); 
-                location.reload(); 
-            }
-        }
+        function resetGame() { if(confirm("⚠ PERINGATAN KERAS!\n\nYakin ingin menghapus SEMUA uang, kartu, dan staf? Data tidak bisa dikembalikan!")) { localStorage.removeItem('tcgTycoonSave'); localStorage.removeItem('tcgTycoonCardDB'); location.reload(); } }
 
         function renderAnalyticsModal() {
             const container = document.getElementById('content-analytics');
-            const today = state.dayCount;
-            const yesterday = Math.max(1, today - 1);
+            const today = state.dayCount; const yesterday = Math.max(1, today - 1);
             const profitToday = state.analytics.dailyProfit[today] || 0;
             const profitYesterday = state.analytics.dailyProfit[yesterday] || 0;
-
-            const topCards = Object.entries(state.analytics.cardSalesCount)
-                .sort((a, b) => b - a) 
-                .slice(0, 5);
+            const topCards = Object.entries(state.analytics.cardSalesCount).sort((a, b) => b - a).slice(0, 5);
 
             let topCardsHtml = '';
-            if (topCards.length === 0) {
-                topCardsHtml = '<div style="color:#888; font-size:12px; text-align:center; padding: 10px;">Belum ada data penjualan</div>';
-            } else {
-                topCards.forEach((c, i) => {
-                    topCardsHtml += `<div class="top-card-item"><span style="color:var(--text-light)">#${i+1} ${c}</span><strong style="color:var(--green)">${c} terjual</strong></div>`;
-                });
-            }
+            if (topCards.length === 0) topCardsHtml = '<div style="color:#888; font-size:12px; text-align:center; padding: 10px;">Belum ada data penjualan</div>';
+            else topCards.forEach((c, i) => topCardsHtml += `<div class="top-card-item"><span style="color:var(--text-light)">#${i+1} ${c}</span><strong style="color:var(--green)">${c} terjual</strong></div>`);
 
             let chartCardName = topCards.length > 0 ? topCards : (state.cardDatabase.length > 0 ? state.cardDatabase.name : '');
             let chartHtml = '';
             
             if (chartCardName && state.priceHistory[chartCardName]) {
-                const history = state.priceHistory[chartCardName];
-                const maxPrice = Math.max(...history, 1); 
-                
+                const history = state.priceHistory[chartCardName]; const maxPrice = Math.max(...history, 1); 
                 let barsHtml = '';
                 history.forEach(price => {
                     const heightPct = Math.max(5, Math.round((price / maxPrice) * 100)); 
-                    let color = 'var(--amber)';
-                    if (heightPct > 80) color = 'var(--green)';
-                    if (heightPct < 40) color = 'var(--red)';
+                    let color = 'var(--amber)'; if (heightPct > 80) color = 'var(--green)'; if (heightPct < 40) color = 'var(--red)';
                     barsHtml += `<div class="chart-bar-container"><div class="chart-val">$${price}</div><div class="chart-bar" style="height: ${heightPct}%; background-color: ${color};"></div></div>`;
                 });
-
-                chartHtml = `
-                    <div style="font-size:12px; font-weight:bold; margin-top:16px; margin-bottom: 4px; color:var(--blue);">📈 Tren Harga Dasar: ${chartCardName}</div>
-                    <div class="chart-wrapper">${barsHtml}</div>
-                `;
+                chartHtml = `<div style="font-size:12px; font-weight:bold; margin-top:16px; margin-bottom: 4px; color:var(--blue);">📈 Tren Harga Dasar: ${chartCardName}</div><div class="chart-wrapper" style="display:flex; gap:4px; height:80px; align-items:flex-end; margin-top:8px;">${barsHtml}</div>`;
             }
 
-            container.innerHTML = `
-                <div style="display:flex; gap:8px; margin-bottom:16px;">
-                    <div class="stat-box"><div class="stat-label">Profit Hari Ini</div><div class="stat-value">$${profitToday}</div></div>
-                    <div class="stat-box"><div class="stat-label">Profit Kemarin</div><div class="stat-value" style="color:var(--text-dim)">$${profitYesterday}</div></div>
-                </div>
-                <div style="background:#1A1A1A; padding:12px; border-radius:8px; border:1px solid #333;">
-                    <div style="font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--amber);">🏆 Top 5 Kartu Terlaris</div>
-                    ${topCardsHtml}
-                </div>
-                ${chartHtml}
-            `;
+            container.innerHTML = `<div style="display:flex; gap:8px; margin-bottom:16px;"><div class="stat-box" style="flex:1; background:#222; padding:10px; border-radius:6px; text-align:center;"><div class="stat-label" style="font-size:10px; color:#888;">Profit Hari Ini</div><div class="stat-value" style="font-size:18px; color:var(--green); font-weight:bold;">$${profitToday}</div></div><div class="stat-box" style="flex:1; background:#222; padding:10px; border-radius:6px; text-align:center;"><div class="stat-label" style="font-size:10px; color:#888;">Profit Kemarin</div><div class="stat-value" style="color:var(--text-dim); font-size:18px; font-weight:bold;">$${profitYesterday}</div></div></div><div style="background:#1A1A1A; padding:12px; border-radius:8px; border:1px solid #333;"><div style="font-size:12px; font-weight:bold; margin-bottom:8px; color:var(--amber);">🏆 Top 5 Kartu Terlaris</div>${topCardsHtml}</div>${chartHtml}`;
             openModal('modal-analytics');
         }
 
         function renderBankModal() {
             const container = document.getElementById('content-bank');
             let html = '';
-            if(state.loanAmount === 0) {
-                html += `
-                    <p style="color: #ccc; margin-bottom: 16px;">Butuh modal cepat?</p>
-                    <button class="btn btn-full" style="background: #4CAF50;" onclick="takeLoan()">Pinjam $500 (bunga $100)</button>
-                `;
-            } else {
-                const canPay = state.money >= state.loanAmount;
-                html += `
-                    <h2 style="color: #FF5252; margin-bottom: 4px;">Hutang: $${state.loanAmount}</h2>
-                    <p style="color: #ccc; margin-bottom: 16px;">Jatuh Tempo: ${state.loanDaysLeft} hari</p>
-                    <button class="btn btn-full" style="background: ${canPay ? '#2196F3' : '#555'};" ${!canPay?'disabled':''} onclick="payLoan()">Bayar Lunas</button>
-                `;
-            }
-            container.innerHTML = html;
-            openModal('modal-bank');
+            if(state.loanAmount === 0) { html += `<p style="color: #ccc; margin-bottom: 16px;">Butuh modal cepat?</p><button class="btn btn-full" style="background: #4CAF50;" onclick="takeLoan()">Pinjam $500 (bunga $100)</button>`; } 
+            else { const canPay = state.money >= state.loanAmount; html += `<h2 style="color: #FF5252; margin-bottom: 4px;">Hutang: $${state.loanAmount}</h2><p style="color: #ccc; margin-bottom: 16px;">Jatuh Tempo: ${state.loanDaysLeft} hari</p><button class="btn btn-full" style="background: ${canPay ? '#2196F3' : '#555'};" ${!canPay?'disabled':''} onclick="payLoan()">Bayar Lunas</button>`; }
+            container.innerHTML = html; openModal('modal-bank');
         }
 
-        function takeLoan() {
-            state.loanAmount = 600;
-            state.loanDaysLeft = 3;
-            state.money += 500;
-            state.isBankrupt = false;
-            saveGameState();
-            closeModal('modal-bank');
-            showToast('+$500. Kembalikan $600 dalam 3 hari!', 'success');
-        }
-
-        function payLoan() {
-            if(state.money >= state.loanAmount) {
-                state.money -= state.loanAmount;
-                state.loanAmount = 0;
-                state.loanDaysLeft = 0;
-                saveGameState();
-                closeModal('modal-bank');
-                showToast('Hutang lunas! Toko aman kembali.', 'success');
-            }
-        }
+        function takeLoan() { state.loanAmount = 600; state.loanDaysLeft = 3; state.money += 500; state.isBankrupt = false; saveGameState(); closeModal('modal-bank'); showToast('+$500. Kembalikan $600 dalam 3 hari!', 'success'); }
+        function payLoan() { if(state.money >= state.loanAmount) { state.money -= state.loanAmount; state.loanAmount = 0; state.loanDaysLeft = 0; saveGameState(); closeModal('modal-bank'); showToast('Hutang lunas! Toko aman kembali.', 'success'); } }
 
         function renderCardActionModal(cardName, grade, qty, itemKey) {
             const baseMarket = state.marketPrices[cardName] || 0;
             const cardData = state.cardDatabase.find(c => c.name === cardName);
-            
             const multiplier = getGradeMultiplier(grade);
             const marketPrice = Math.round(baseMarket * multiplier);
             const baseVal = Math.round(cardData.baseValue * multiplier);
-
             const currentSetPrice = state.customPrices[itemKey] || marketPrice;
             const displayName = grade ? `[PSA ${grade}] ${cardName}` : cardName;
 
             document.getElementById('card-action-title').innerText = `Etalase`;
             document.getElementById('card-action-title').style.fontSize = '14px';
             document.getElementById('card-action-title').innerHTML = `<span>${displayName}</span><button class="close-btn" onclick="closeModal('modal-card')">&times;</button>`;
-            
             document.getElementById('card-action-base').innerText = `Harga Dasar: $${baseVal}`;
             document.getElementById('card-action-market').innerText = `Pasar: $${marketPrice}`;
             document.getElementById('card-action-input').value = currentSetPrice;
@@ -1399,8 +1209,7 @@
             document.getElementById('btn-set-etalase').onclick = () => {
                 const inputVal = parseInt(document.getElementById('card-action-input').value);
                 state.customPrices[itemKey] = isNaN(inputVal) ? marketPrice : inputVal;
-                saveGameState();
-                closeModal('modal-card');
+                saveGameState(); closeModal('modal-card');
             };
 
             const quickPrice = Math.round(marketPrice * 0.8);
@@ -1414,9 +1223,7 @@
                     state.myInventory.splice(index, 1);
                     state.customers = state.customers.filter(c => c.targetCardId !== soldId);
                     if (!state.myInventory.some(i => (i.cardName + (i.grade ? '_G'+i.grade : '')) === itemKey)) delete state.customPrices[itemKey];
-                    playSound('sfx-coin');
-                    recordSale(cardName, quickPrice);
-                    saveGameState();
+                    playSound('sfx-coin'); recordSale(cardName, quickPrice); saveGameState();
                 }
                 closeModal('modal-card');
             };
@@ -1430,72 +1237,32 @@
                     state.money += bulkPrice;
                     state.myInventory = state.myInventory.filter(i => (i.cardName + (i.grade ? '_G'+i.grade : '')) !== itemKey);
                     delete state.customPrices[itemKey];
-                    
                     state.customers = state.customers.filter(c => (c.targetCardName + (c.targetGrade ? '_G'+c.targetGrade : '')) !== itemKey);
-                    
-                    playSound('sfx-coin');
-                    recordSale(cardName, bulkPrice);
-                    state.analytics.cardSalesCount[cardName] += (qty - 1); 
-                    saveGameState();
-                    closeModal('modal-card');
+                    playSound('sfx-coin'); recordSale(cardName, bulkPrice); state.analytics.cardSalesCount[cardName] += (qty - 1); 
+                    saveGameState(); closeModal('modal-card');
                 };
-            } else {
-                btnBulk.style.display = 'none';
-            }
+            } else { btnBulk.style.display = 'none'; }
             openModal('modal-card');
         }
 
         // --- PACK OPENING ---
         function renderPackOpening(packConf, pulledCards) {
-            const modal = document.getElementById('pack-opening-modal');
-            modal.style.display = 'flex';
-            
-            let streamOverlayHtml = '';
-            let currentViewers = 0;
+            const modal = document.getElementById('pack-opening-modal'); modal.style.display = 'flex';
+            let streamOverlayHtml = ''; let currentViewers = 0;
             if(state.stream.isLiveMode) {
                 currentViewers = Math.floor(Math.random() * 15) + Math.floor(state.stream.subscribers * 0.1) + 5;
-                streamOverlayHtml = `
-                    <div class="stream-overlay" id="stream-overlay" style="display: flex;">
-                        <div class="stream-header">
-                            <span style="color:white; font-weight:bold; font-size: 14px;">📺 ${state.stream.channelName}</span>
-                            <div class="stream-viewers"><div class="live-dot"></div> <span>${currentViewers}</span></div>
-                        </div>
-                        <div class="stream-chat-container" id="stream-chat"></div>
-                    </div>
-                `;
+                streamOverlayHtml = `<div class="stream-overlay" id="stream-overlay" style="display: flex;"><div class="stream-header"><span style="color:white; font-weight:bold; font-size: 14px;">📺 ${state.stream.channelName}</span><div class="stream-viewers"><div class="live-dot"></div> <span>${currentViewers}</span></div></div><div class="stream-chat-container" id="stream-chat"></div></div>`;
             }
+            let packContent = packConf.img ? `<img src="${packConf.img}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">` : `<span style="z-index: 1;">${packConf.name.toUpperCase()}<br>BOOSTER</span>`;
 
-            let packContent = packConf.img 
-                ? `<img src="${packConf.img}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">`
-                : `<span style="z-index: 1;">${packConf.name.toUpperCase()}<br>BOOSTER</span>`;
+            modal.innerHTML = `${streamOverlayHtml}<div class="pack-shake-old" id="pack-graphic">${packContent}</div><div style="position: absolute; bottom: 20px; color: white; font-weight: bold;">(1 Pack = 10 Kartu)</div>`;
 
-            modal.innerHTML = `
-                ${streamOverlayHtml}
-                <div class="pack-shake-old" id="pack-graphic">
-                    ${packContent}
-                </div>
-                <div style="position: absolute; bottom: 20px; color: white; font-weight: bold;">(1 Pack = 10 Kartu)</div>
-            `;
-
-            if(state.stream.isLiveMode) {
-                const chatContainer = document.getElementById('stream-chat');
-                startSimulatedChat(chatContainer);
-            }
+            if(state.stream.isLiveMode) startSimulatedChat(document.getElementById('stream-chat'));
 
             setTimeout(() => {
                 playSound('sfx-rip'); 
                 const packGraphic = document.getElementById('pack-graphic');
-
-                packGraphic.outerHTML = `
-                    <div class="pack-wrapper">
-                        <div class="pack-top-crimp"></div>
-                        <div class="pack-body">${packContent}</div>
-                        <div class="pack-rip-piece rp1"></div>
-                        <div class="pack-rip-piece rp2"></div>
-                    </div>
-                    <div class="pack-flash" id="pack-flash"></div>
-                    <div class="pack-result" id="pack-result"></div>
-                `;
+                packGraphic.outerHTML = `<div class="pack-wrapper"><div class="pack-top-crimp"></div><div class="pack-body">${packContent}</div><div class="pack-rip-piece rp1"></div><div class="pack-rip-piece rp2"></div></div><div class="pack-flash" id="pack-flash"></div><div class="pack-result" id="pack-result"></div>`;
 
                 const wrapperEl = modal.querySelector('.pack-wrapper');
                 const topCrimpEl = modal.querySelector('.pack-top-crimp');
@@ -1504,86 +1271,52 @@
                 wrapperEl.style.animation = 'ripPackSequence 2s forwards, shake 0.1s infinite alternate';
                 topCrimpEl.style.animation = 'ripTopPart 2s forwards'; 
                 wrapperEl.style.animation = 'ripPackSequence 2s forwards, ripBodyShape 2s forwards, shake 0.1s infinite alternate';
-
-                ripPieceEls.forEach(piece => {
-                    piece.style.display = 'block';
-                    piece.style.animation = `ripPieceFall 1.5s forwards ${Math.random() * 0.3 + 0.5}s`; 
-                });
+                ripPieceEls.forEach(piece => { piece.style.display = 'block'; piece.style.animation = `ripPieceFall 1.5s forwards ${Math.random() * 0.3 + 0.5}s`; });
 
                 setTimeout(() => {
                     wrapperEl.style.display = 'none'; 
-                    const flashEl = document.getElementById('pack-flash');
-                    flashEl.style.display = 'block'; 
-                    
+                    const flashEl = document.getElementById('pack-flash'); flashEl.style.display = 'block'; 
                     setTimeout(() => {
-                        flashEl.style.display = 'none'; 
-                        playSound('sfx-tada'); 
+                        flashEl.style.display = 'none'; playSound('sfx-tada'); 
 
-                        let cardsHtml = '';
-                        let rareCount = 0;
-                        let legendCount = 0;
-
+                        let cardsHtml = ''; let rareCount = 0; let legendCount = 0;
                         pulledCards.forEach((card, i) => {
                             const isLast = i === pulledCards.length - 1;
                             cardsHtml += `<div class="pack-card-item ${isLast ? 'rare-pull' : ''}"><img src="${card.imageUrl}" onerror="this.src=''; this.style.background='#333';"></div>`;
-                            
-                            if(card.rarity === 'Legend') legendCount++;
-                            else if(card.rarity === 'Super Rare') rareCount++;
+                            if(card.rarity === 'Legend') legendCount++; else if(card.rarity === 'Super Rare') rareCount++;
                         });
 
                         let newSubs = 0;
                         if(state.stream.isLiveMode) {
-                            const chatContainer = document.getElementById('stream-chat');
-                            let totalDonation = 0;
-
+                            const chatContainer = document.getElementById('stream-chat'); let totalDonation = 0;
                             if (legendCount > 0) {
-                                const donation = (Math.floor(Math.random() * 50) + 20) * legendCount;
-                                totalDonation += donation;
-                                newSubs += Math.floor(Math.random() * 20) + 10;
-                                setTimeout(() => {
-                                    const user = CHAT_NAMES[Math.floor(Math.random() * CHAT_NAMES.length)];
-                                    addChatMessage(chatContainer, user, "Bikin jadi video short bang!! 🔥🔥", true, donation);
-                                }, 500);
+                                const donation = (Math.floor(Math.random() * 50) + 20) * legendCount; totalDonation += donation; newSubs += Math.floor(Math.random() * 20) + 10;
+                                setTimeout(() => addChatMessage(chatContainer, CHAT_NAMES[Math.floor(Math.random() * CHAT_NAMES.length)], "Bikin jadi video short bang!! 🔥🔥", true, donation), 500);
                             } else if (rareCount > 0) {
-                                const donation = (Math.floor(Math.random() * 10) + 5) * rareCount;
-                                totalDonation += donation;
-                                newSubs += Math.floor(Math.random() * 5) + 2;
-                                setTimeout(() => {
-                                    const user = CHAT_NAMES[Math.floor(Math.random() * CHAT_NAMES.length)];
-                                    addChatMessage(chatContainer, user, "Mantap dapet SR!", true, donation);
-                                }, 800);
-                            } else {
-                                setTimeout(() => { addChatMessage(chatContainer, "PikaBoy", "Yahh zonk wkwk"); }, 500);
-                            }
+                                const donation = (Math.floor(Math.random() * 10) + 5) * rareCount; totalDonation += donation; newSubs += Math.floor(Math.random() * 5) + 2;
+                                setTimeout(() => addChatMessage(chatContainer, CHAT_NAMES[Math.floor(Math.random() * CHAT_NAMES.length)], "Mantap dapet SR!", true, donation), 800);
+                            } else { setTimeout(() => addChatMessage(chatContainer, "PikaBoy", "Yahh zonk wkwk"), 500); }
                         }
 
-                        const resultEl = document.getElementById('pack-result');
-                        resultEl.style.display = 'flex';
+                        const resultEl = document.getElementById('pack-result'); resultEl.style.display = 'flex';
                         resultEl.innerHTML = `
                             <h3 style="color: yellow; text-align: center; margin-top: 8px;">✨ KARTU DIDAPATKAN! ✨</h3>
                             ${state.stream.isLiveMode && newSubs > 0 ? `<div style="text-align:center; color:#69F0AE; font-size:12px; margin-bottom:4px;">Stream Sukses! +${newSubs} Subscribers</div>` : ''}
-                            <div class="pack-grid">${cardsHtml}</div>
-                            <button class="btn btn-full" style="background: var(--green);" id="btn-collect-pack">Masukkan ke Etalase</button>
+                            <div class="pack-grid">${cardsHtml}</div><button class="btn btn-full" style="background: var(--green);" id="btn-collect-pack">Masukkan ke Etalase</button>
                         `;
 
                         document.getElementById('btn-collect-pack').onclick = () => {
                             if(chatInterval) clearInterval(chatInterval);
-                            
                             if(state.stream.isLiveMode) state.stream.subscribers += newSubs;
-                            
-                            pulledCards.forEach(card => {
-                                state.myInventory.push({ id: state.nextCardId++, cardName: card.name });
-                            });
-                            saveGameState();
-                            modal.style.display = 'none'; 
-                            isAnimating = false; 
+                            pulledCards.forEach(card => state.myInventory.push({ id: state.nextCardId++, cardName: card.name }));
+                            saveGameState(); modal.style.display = 'none'; isAnimating = false; 
                         };
                     }, 500); 
                 }, 2000); 
             }, 1000); 
         }
 
-        // ─── HELPER FUNCTIONS ───
+        // --- FUNGSI MODAL PENTING ---
         function openModal(id) { document.getElementById(id).style.display = 'flex'; }
         function closeModal(id) { document.getElementById(id).style.display = 'none'; }
 
