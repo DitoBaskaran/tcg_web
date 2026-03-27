@@ -1,0 +1,94 @@
+{
+    "packs": [
+        {
+            "id": "base",
+            "name": "Base Set",
+            "price": 15,
+            "apiSetId": "base1",
+            "color": "#1E88E5",
+            "img": "https:\/\/asia.pokemon-card.com\/id\/archive\/special\/card\/s10b\/assets\/images\/hero-pack-1.png"
+        },
+        {
+            "id": "fossil",
+            "name": "Fossil Set",
+            "price": 25,
+            "apiSetId": "base2",
+            "color": "#8D6E63",
+            "img": "https:\/\/asia.pokemon-card.com\/id\/card-img\/products\/idn_ma3_pillow_img_news.png"
+        },
+        {
+            "id": "mega",
+            "name": "Mega Set",
+            "price": 55,
+            "apiSetId": "base3",
+            "color": "#76638D",
+            "img": "assets\/pack\/pack_3.jpg"
+        },
+        {
+            "id": "inferno",
+            "name": "Inferno Set",
+            "price": 75,
+            "apiSetId": "base4",
+            "color": "#B26060",
+            "img": "assets\/pack\/pack_4.jpg"
+        },
+        {
+            "id": "pack_1774594407560",
+            "name": "Nature Pack 1.0",
+            "price": 100,
+            "apiSetId": "base5",
+            "color": "#1E88E5",
+            "img": "assets\/pack\/pack_5.jpg"
+        },
+        {
+            "id": "pack_1774594701006",
+            "name": "Space Pack 1.0",
+            "price": 125,
+            "apiSetId": "base6",
+            "color": "#1E88E5",
+            "img": "assets\/pack\/pack_6.jpg"
+        }
+    ],
+    "items": [
+        {
+            "id": "sleeve",
+            "name": "Sleeve Pelindung",
+            "buyPrice": 10,
+            "buyQty": 10,
+            "sellPrice": 2,
+            "icon": "\ud83c\udfb4",
+            "img": "",
+            "desc": "Dibeli otomatis saat pelanggan beli kartu mahal."
+        },
+        {
+            "id": "kopi",
+            "name": "Kopi Dingin",
+            "buyPrice": 20,
+            "buyQty": 10,
+            "sellPrice": 4,
+            "icon": "\ud83e\udd64",
+            "img": "",
+            "desc": "Mengurangi efek marah pelanggan saat tawaran ditolak."
+        },
+        {
+            "id": "kaos",
+            "name": "Kaos Excl. DBSKRN",
+            "buyPrice": 100,
+            "buyQty": 5,
+            "sellPrice": 35,
+            "icon": "\ud83d\udc55",
+            "img": "",
+            "desc": "Apparel streetwear keren! Laku keras buat Sultan."
+        },
+        {
+            "id": "item_1774595880751",
+            "name": "Mega EV Box",
+            "buyPrice": 125,
+            "buyQty": 5,
+            "sellPrice": 5,
+            "icon": "\ud83d\udce6",
+            "img": "assets\/pack\/pack_box_1.jpg",
+            "desc": "Membuat pelanggan senang."
+        }
+    ]
+}

@@ -1,0 +1,2866 @@
+[
+    {
+        "apiId": "base1-1",
+        "name": "Alakazam",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/1_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-2",
+        "name": "Blastoise",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/2_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-3",
+        "name": "Chansey",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/3_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-4",
+        "name": "Charizard",
+        "rarity": "Rare Holo",
+        "baseValue": 500,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/4_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-5",
+        "name": "Clefairy",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/5_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-6",
+        "name": "Gyarados",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/6_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-7",
+        "name": "Hitmonchan",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/7_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-8",
+        "name": "Machamp",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/8_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-9",
+        "name": "Magneton",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/9_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-10",
+        "name": "Mewtwo",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/10_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-11",
+        "name": "Nidoking",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/11_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-12",
+        "name": "Ninetales",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/12_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-13",
+        "name": "Poliwrath",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/13_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-14",
+        "name": "Raichu",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/14_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-15",
+        "name": "Venusaur",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/15_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-16",
+        "name": "Zapdos",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/16_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-17",
+        "name": "Beedrill",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/17_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-18",
+        "name": "Dragonair",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/18_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-19",
+        "name": "Dugtrio",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/19_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-20",
+        "name": "Electabuzz",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/20_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-21",
+        "name": "Electrode",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/21_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-22",
+        "name": "Pidgeotto",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/22_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-23",
+        "name": "Arcanine",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/23_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-24",
+        "name": "Charmeleon",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/24_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-25",
+        "name": "Dewgong",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/25_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-26",
+        "name": "Dratini",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/26_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-27",
+        "name": "Farfetch'd",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/27_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-28",
+        "name": "Growlithe",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/28_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-29",
+        "name": "Haunter",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/29_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-30",
+        "name": "Ivysaur",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/30_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-31",
+        "name": "Jynx",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/31_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-32",
+        "name": "Kadabra",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/32_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-33",
+        "name": "Kakuna",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/33_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-34",
+        "name": "Machoke",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/34_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-35",
+        "name": "Magikarp",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/35_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-36",
+        "name": "Magmar",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/36_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-37",
+        "name": "Nidorino",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/37_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-38",
+        "name": "Poliwhirl",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/38_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-39",
+        "name": "Porygon",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/39_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-40",
+        "name": "Raticate",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/40_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-41",
+        "name": "Seel",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/41_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-42",
+        "name": "Wartortle",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/42_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-43",
+        "name": "Abra",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/43_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-44",
+        "name": "Bulbasaur",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/44_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-45",
+        "name": "Caterpie",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/45_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-46",
+        "name": "Charmander",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/46_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-47",
+        "name": "Diglett",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/47_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-48",
+        "name": "Doduo",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/48_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-49",
+        "name": "Drowzee",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/49_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-50",
+        "name": "Gastly",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/50_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-51",
+        "name": "Koffing",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/51_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-52",
+        "name": "Machop",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/52_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-53",
+        "name": "Magnemite",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/53_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-54",
+        "name": "Metapod",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/54_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-55",
+        "name": "Nidoran \u2642",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/55_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-56",
+        "name": "Onix",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/56_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-57",
+        "name": "Pidgey",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/57_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-58",
+        "name": "Pikachu",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/58_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-59",
+        "name": "Poliwag",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/59_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-60",
+        "name": "Ponyta",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/60_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-61",
+        "name": "Rattata",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/61_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-62",
+        "name": "Sandshrew",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/62_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-63",
+        "name": "Squirtle",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/63_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-64",
+        "name": "Starmie",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/64_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-65",
+        "name": "Staryu",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/65_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-66",
+        "name": "Tangela",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/66_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-67",
+        "name": "Voltorb",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/67_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-68",
+        "name": "Vulpix",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/68_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-69",
+        "name": "Weedle",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/69_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-70",
+        "name": "Clefairy Doll",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/70_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-71",
+        "name": "Computer Search",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/71_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-72",
+        "name": "Devolution Spray",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/72_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-73",
+        "name": "Impostor Professor Oak",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/73_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-74",
+        "name": "Item Finder",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/74_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-75",
+        "name": "Lass",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/75_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-76",
+        "name": "Pok\u00e9mon Breeder",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/76_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-77",
+        "name": "Pok\u00e9mon Trader",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/77_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-78",
+        "name": "Scoop Up",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/78_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-79",
+        "name": "Super Energy Removal",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/79_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-80",
+        "name": "Defender",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/80_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-81",
+        "name": "Energy Retrieval",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/81_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-82",
+        "name": "Full Heal",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/82_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-83",
+        "name": "Maintenance",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/83_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-84",
+        "name": "PlusPower",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/84_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-85",
+        "name": "Pok\u00e9mon Center",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/85_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-86",
+        "name": "Pok\u00e9mon Flute",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/86_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-87",
+        "name": "Pok\u00e9dex",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/87_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-88",
+        "name": "Professor Oak",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/88_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-89",
+        "name": "Revive",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/89_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-90",
+        "name": "Super Potion",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/90_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-91",
+        "name": "Bill",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/91_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-92",
+        "name": "Energy Removal",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/92_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-93",
+        "name": "Gust of Wind",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/93_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-94",
+        "name": "Potion",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/94_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-95",
+        "name": "Switch",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/95_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-96",
+        "name": "Double Colorless Energy",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/96_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-97",
+        "name": "Fighting Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/97_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-98",
+        "name": "Fire Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/98_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-99",
+        "name": "Grass Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/99_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-100",
+        "name": "Lightning Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/100_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-101",
+        "name": "Psychic Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/101_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base1-102",
+        "name": "Water Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base1\/102_hires.png",
+        "setId": "base1"
+    },
+    {
+        "apiId": "base2-1",
+        "name": "Clefable",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/1_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-2",
+        "name": "Electrode",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/2_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-3",
+        "name": "Flareon",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/3_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-4",
+        "name": "Jolteon",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/4_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-5",
+        "name": "Kangaskhan",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/5_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-6",
+        "name": "Mr. Mime",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/6_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-7",
+        "name": "Nidoqueen",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/7_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-8",
+        "name": "Pidgeot",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/8_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-9",
+        "name": "Pinsir",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/9_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-10",
+        "name": "Scyther",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/10_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-11",
+        "name": "Snorlax",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/11_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-12",
+        "name": "Vaporeon",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/12_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-13",
+        "name": "Venomoth",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/13_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-14",
+        "name": "Victreebel",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/14_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-15",
+        "name": "Vileplume",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/15_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-16",
+        "name": "Wigglytuff",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/16_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-17",
+        "name": "Clefable",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/17_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-18",
+        "name": "Electrode",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/18_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-19",
+        "name": "Flareon",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/19_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-20",
+        "name": "Jolteon",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/20_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-21",
+        "name": "Kangaskhan",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/21_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-22",
+        "name": "Mr. Mime",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/22_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-23",
+        "name": "Nidoqueen",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/23_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-24",
+        "name": "Pidgeot",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/24_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-25",
+        "name": "Pinsir",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/25_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-26",
+        "name": "Scyther",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/26_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-27",
+        "name": "Snorlax",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/27_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-28",
+        "name": "Vaporeon",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/28_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-29",
+        "name": "Venomoth",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/29_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-30",
+        "name": "Victreebel",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/30_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-31",
+        "name": "Vileplume",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/31_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-32",
+        "name": "Wigglytuff",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/32_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-33",
+        "name": "Butterfree",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/33_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-34",
+        "name": "Dodrio",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/34_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-35",
+        "name": "Exeggutor",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/35_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-36",
+        "name": "Fearow",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/36_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-37",
+        "name": "Gloom",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/37_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-38",
+        "name": "Lickitung",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/38_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-39",
+        "name": "Marowak",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/39_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-40",
+        "name": "Nidorina",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/40_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-41",
+        "name": "Parasect",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/41_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-42",
+        "name": "Persian",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/42_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-43",
+        "name": "Primeape",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/43_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-44",
+        "name": "Rapidash",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/44_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-45",
+        "name": "Rhydon",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/45_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-46",
+        "name": "Seaking",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/46_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-47",
+        "name": "Tauros",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/47_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-48",
+        "name": "Weepinbell",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/48_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-49",
+        "name": "Bellsprout",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/49_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-50",
+        "name": "Cubone",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/50_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-51",
+        "name": "Eevee",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/51_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-52",
+        "name": "Exeggcute",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/52_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-53",
+        "name": "Goldeen",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/53_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-54",
+        "name": "Jigglypuff",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/54_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-55",
+        "name": "Mankey",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/55_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-56",
+        "name": "Meowth",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/56_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-57",
+        "name": "Nidoran \u2640",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/57_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-58",
+        "name": "Oddish",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/58_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-59",
+        "name": "Paras",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/59_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-60",
+        "name": "Pikachu",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/60_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-61",
+        "name": "Rhyhorn",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/61_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-62",
+        "name": "Spearow",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/62_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-63",
+        "name": "Venonat",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/63_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base2-64",
+        "name": "Pok\u00e9 Ball",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base2\/64_hires.png",
+        "setId": "base2"
+    },
+    {
+        "apiId": "base3-1",
+        "name": "Aerodactyl",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/1_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-2",
+        "name": "Articuno",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/2_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-3",
+        "name": "Ditto",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/3_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-4",
+        "name": "Dragonite",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/4_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-5",
+        "name": "Gengar",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/5_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-6",
+        "name": "Haunter",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/6_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-7",
+        "name": "Hitmonlee",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/7_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-8",
+        "name": "Hypno",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/8_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-9",
+        "name": "Kabutops",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/9_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-10",
+        "name": "Lapras",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/10_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-11",
+        "name": "Magneton",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/11_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-12",
+        "name": "Moltres",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/12_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-13",
+        "name": "Muk",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/13_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-14",
+        "name": "Raichu",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/14_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-15",
+        "name": "Zapdos",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/15_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-16",
+        "name": "Aerodactyl",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/16_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-17",
+        "name": "Articuno",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/17_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-18",
+        "name": "Ditto",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/18_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-19",
+        "name": "Dragonite",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/19_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-20",
+        "name": "Gengar",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/20_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-21",
+        "name": "Haunter",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/21_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-22",
+        "name": "Hitmonlee",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/22_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-23",
+        "name": "Hypno",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/23_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-24",
+        "name": "Kabutops",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/24_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-25",
+        "name": "Lapras",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/25_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-26",
+        "name": "Magneton",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/26_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-27",
+        "name": "Moltres",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/27_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-28",
+        "name": "Muk",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/28_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-29",
+        "name": "Raichu",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/29_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-30",
+        "name": "Zapdos",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/30_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-31",
+        "name": "Arbok",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/31_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-32",
+        "name": "Cloyster",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/32_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-33",
+        "name": "Gastly",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/33_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-34",
+        "name": "Golbat",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/34_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-35",
+        "name": "Golduck",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/35_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-36",
+        "name": "Golem",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/36_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-37",
+        "name": "Graveler",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/37_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-38",
+        "name": "Kingler",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/38_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-39",
+        "name": "Magmar",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/39_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-40",
+        "name": "Omastar",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/40_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-41",
+        "name": "Sandslash",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/41_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-42",
+        "name": "Seadra",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/42_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-43",
+        "name": "Slowbro",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/43_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-44",
+        "name": "Tentacruel",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/44_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-45",
+        "name": "Weezing",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/45_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-46",
+        "name": "Ekans",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/46_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-47",
+        "name": "Geodude",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/47_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-48",
+        "name": "Grimer",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/48_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-49",
+        "name": "Horsea",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/49_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-50",
+        "name": "Kabuto",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/50_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-51",
+        "name": "Krabby",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/51_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-52",
+        "name": "Omanyte",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/52_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-53",
+        "name": "Psyduck",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/53_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-54",
+        "name": "Shellder",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/54_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-55",
+        "name": "Slowpoke",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/55_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-56",
+        "name": "Tentacool",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/56_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-57",
+        "name": "Zubat",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/57_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-58",
+        "name": "Mr. Fuji",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/58_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-59",
+        "name": "Energy Search",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/59_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-60",
+        "name": "Gambler",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/60_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-61",
+        "name": "Recycle",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/61_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base3-62",
+        "name": "Mysterious Fossil",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base3\/62_hires.png",
+        "setId": "base3"
+    },
+    {
+        "apiId": "base4-1",
+        "name": "Alakazam",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/1_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-2",
+        "name": "Blastoise",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/2_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-3",
+        "name": "Chansey",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/3_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-4",
+        "name": "Charizard",
+        "rarity": "Rare Holo",
+        "baseValue": 500,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/4_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-5",
+        "name": "Clefable",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/5_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-6",
+        "name": "Clefairy",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/6_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-7",
+        "name": "Gyarados",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/7_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-8",
+        "name": "Hitmonchan",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/8_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-9",
+        "name": "Magneton",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/9_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-10",
+        "name": "Mewtwo",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/10_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-11",
+        "name": "Nidoking",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/11_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-12",
+        "name": "Nidoqueen",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/12_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-13",
+        "name": "Ninetales",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/13_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-14",
+        "name": "Pidgeot",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/14_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-15",
+        "name": "Poliwrath",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/15_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-16",
+        "name": "Raichu",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/16_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-17",
+        "name": "Scyther",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/17_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-18",
+        "name": "Venusaur",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/18_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-19",
+        "name": "Wigglytuff",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/19_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-20",
+        "name": "Zapdos",
+        "rarity": "Rare Holo",
+        "baseValue": 150,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/20_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-21",
+        "name": "Beedrill",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/21_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-22",
+        "name": "Dragonair",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/22_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-23",
+        "name": "Dugtrio",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/23_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-24",
+        "name": "Electabuzz",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/24_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-25",
+        "name": "Electrode",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/25_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-26",
+        "name": "Kangaskhan",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/26_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-27",
+        "name": "Mr. Mime",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/27_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-28",
+        "name": "Pidgeotto",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/28_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-29",
+        "name": "Pinsir",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/29_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-30",
+        "name": "Snorlax",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/30_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-31",
+        "name": "Venomoth",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/31_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-32",
+        "name": "Victreebel",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/32_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-33",
+        "name": "Arcanine",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/33_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-34",
+        "name": "Butterfree",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/34_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-35",
+        "name": "Charmeleon",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/35_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-36",
+        "name": "Dewgong",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/36_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-37",
+        "name": "Dodrio",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/37_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-38",
+        "name": "Dratini",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/38_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-39",
+        "name": "Exeggutor",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/39_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-40",
+        "name": "Farfetch'd",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/40_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-41",
+        "name": "Fearow",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/41_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-42",
+        "name": "Growlithe",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/42_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-43",
+        "name": "Haunter",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/43_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-44",
+        "name": "Ivysaur",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/44_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-45",
+        "name": "Jynx",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/45_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-46",
+        "name": "Kadabra",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/46_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-47",
+        "name": "Kakuna",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/47_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-48",
+        "name": "Lickitung",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/48_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-49",
+        "name": "Machoke",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/49_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-50",
+        "name": "Magikarp",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/50_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-51",
+        "name": "Magmar",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/51_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-52",
+        "name": "Marowak",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/52_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-53",
+        "name": "Nidorina",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/53_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-54",
+        "name": "Nidorino",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/54_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-55",
+        "name": "Parasect",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/55_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-56",
+        "name": "Persian",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/56_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-57",
+        "name": "Poliwhirl",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/57_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-58",
+        "name": "Raticate",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/58_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-59",
+        "name": "Rhydon",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/59_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-60",
+        "name": "Seaking",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/60_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-61",
+        "name": "Seel",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/61_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-62",
+        "name": "Tauros",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/62_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-63",
+        "name": "Wartortle",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/63_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-64",
+        "name": "Weepinbell",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/64_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-65",
+        "name": "Abra",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/65_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-66",
+        "name": "Bellsprout",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/66_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-67",
+        "name": "Bulbasaur",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/67_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-68",
+        "name": "Caterpie",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/68_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-69",
+        "name": "Charmander",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/69_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-70",
+        "name": "Cubone",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/70_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-71",
+        "name": "Diglett",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/71_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-72",
+        "name": "Doduo",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/72_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-73",
+        "name": "Drowzee",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/73_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-74",
+        "name": "Exeggcute",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/74_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-75",
+        "name": "Gastly",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/75_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-76",
+        "name": "Goldeen",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/76_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-77",
+        "name": "Jigglypuff",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/77_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-78",
+        "name": "Machop",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/78_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-79",
+        "name": "Magnemite",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/79_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-80",
+        "name": "Meowth",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/80_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-81",
+        "name": "Metapod",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/81_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-82",
+        "name": "Nidoran \u2640",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/82_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-83",
+        "name": "Nidoran \u2642",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/83_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-84",
+        "name": "Onix",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/84_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-85",
+        "name": "Paras",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/85_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-86",
+        "name": "Pidgey",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/86_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-87",
+        "name": "Pikachu",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/87_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-88",
+        "name": "Poliwag",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/88_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-89",
+        "name": "Rattata",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/89_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-90",
+        "name": "Rhyhorn",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/90_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-91",
+        "name": "Sandshrew",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/91_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-92",
+        "name": "Spearow",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/92_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-93",
+        "name": "Squirtle",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/93_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-94",
+        "name": "Starmie",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/94_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-95",
+        "name": "Staryu",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/95_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-96",
+        "name": "Tangela",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/96_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-97",
+        "name": "Venonat",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/97_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-98",
+        "name": "Voltorb",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/98_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-99",
+        "name": "Vulpix",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/99_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-100",
+        "name": "Weedle",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/100_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-101",
+        "name": "Computer Search",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/101_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-102",
+        "name": "Imposter Professor Oak",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/102_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-103",
+        "name": "Item Finder",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/103_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-104",
+        "name": "Lass",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/104_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-105",
+        "name": "Pok\u00e9mon Breeder",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/105_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-106",
+        "name": "Pok\u00e9mon Trader",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/106_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-107",
+        "name": "Scoop Up",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/107_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-108",
+        "name": "Super Energy Removal",
+        "rarity": "Rare",
+        "baseValue": 50,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/108_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-109",
+        "name": "Defender",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/109_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-110",
+        "name": "Energy Retrieval",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/110_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-111",
+        "name": "Full Heal",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/111_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-112",
+        "name": "Maintenance",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/112_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-113",
+        "name": "PlusPower",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/113_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-114",
+        "name": "Pok\u00e9mon Center",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/114_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-115",
+        "name": "Pok\u00e9dex",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/115_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-116",
+        "name": "Professor Oak",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/116_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-117",
+        "name": "Super Potion",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/117_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-118",
+        "name": "Bill",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/118_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-119",
+        "name": "Energy Removal",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/119_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-120",
+        "name": "Gust of Wind",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/120_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-121",
+        "name": "Pok\u00e9 Ball",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/121_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-122",
+        "name": "Potion",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/122_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-123",
+        "name": "Switch",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/123_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-124",
+        "name": "Double Colorless Energy",
+        "rarity": "Uncommon",
+        "baseValue": 15,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/124_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-125",
+        "name": "Fighting Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/125_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-126",
+        "name": "Fire Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/126_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-127",
+        "name": "Grass Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/127_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-128",
+        "name": "Lightning Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/128_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-129",
+        "name": "Psychic Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/129_hires.png",
+        "setId": "base4"
+    },
+    {
+        "apiId": "base4-130",
+        "name": "Water Energy",
+        "rarity": "Common",
+        "baseValue": 5,
+        "imageUrl": "https:\/\/images.pokemontcg.io\/base4\/130_hires.png",
+        "setId": "base4"
+    }
+]
