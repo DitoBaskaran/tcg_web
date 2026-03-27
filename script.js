@@ -7,21 +7,71 @@ let currentHaggleCustomer = null;
 let currentSearchQuery = '';
 let currentSortMethod = 'newest';
 
-const NPC_NAMES = ["Ash", "Misty", "Brock", "Gary", "Jessie", "James"];
-const CHAT_NAMES = ["Zet_12", "PikaBoy", "GachaAddict", "SultanJakarta", "Mamat_R", "CardSniper", "KolektorTua", "Rafi_X"];
-const CHAT_NORMAL = ["Bismillah dapet bagus", "Skip skip", "Hoki nggak nih", "Buka terus bang", "Lanjut!", "Pasti zonk", "Berdoa dulu"];
+// --- NAMA PELANGGAN (Kombinasi Anime, Nama Lokal, dan Karakter Tongkrongan) ---
+const NPC_NAMES = [
+    "Ash", "Misty", "Brock", "Gary", "Jessie", "James", // Original
+    "Budi", "Asep", "Kevin", "Dimas", "Reza", "Andi", "Joko", // Lokal umum
+    "Siti", "Rina", "Cika", "Putri", // Karakter wanita
+    "Bapak Kos", "Bocil Warnet", "Kang Paket", "Mahasiswa Akhir", // Karakter unik
+    "Kolektor Misterius", "Yanto", "Agus", "Michael", "Tukang Parkir"
+];
+
+// --- NAMA PENONTON STREAM (Gaya username gamer Indo) ---
+const CHAT_NAMES = [
+    "Zet_12", "PikaBoy", "GachaAddict", "SultanJakarta", "Mamat_R", // Original
+    "CardSniper", "KolektorTua", "Rafi_X", "AnakEmak", "PenontonSetia",
+    "SiPalingHoki", "KangSpam", "WibuLokal", "SlebewBoy", "Kobo_Simp",
+    "xX_Sniper_Xx", "InfoNgab", "TukangGacha", "RungkadTerus", "CumaNonton",
+    "PawangKartu", "Bot_01", "Fajar_Sadboy", "GamerPensiun", "MendangMending"
+];
+
+// --- KOMENTAR CHAT STREAM (Reaksi gacha, toxic dikit, hype, dan jokes streamer) ---
+const CHAT_NORMAL = [
+    "Bismillah dapet bagus", "Skip skip", "Hoki nggak nih", "Buka terus bang", "Lanjut!", "Pasti zonk", "Berdoa dulu", // Original
+    "Menyala abangku 🔥", "Rungkad", "Gacor kang", "GG Gaming", "Inget umur bang", 
+    "Bagi giveaway dong", "Buset dah", "Pawang gacha nih", "Wih mantap",
+    "Mandi kembang dulu bang", "Turu bang turu", "GWS (Gacha Waifu Selalu)", 
+    "Info loker bang", "Jual ginjal demi gacha", "Mitos bang mitos",
+    "Yaelah ampas lagi", "Kurang sajen itu", "Bentar lagi dapet tuh",
+    "Pasti disetting ini mah", "Info modal bang", "Kasian mana masih muda",
+    "Ciee deg-degan", "Tarik napas dulu bang", "Mending rakit PC"
+];
 
 let AVAILABLE_PACKS = [];
 let AVAILABLE_ITEMS = [];
 
 const EVENTS = [
+    // --- EVENT SULTAN (type: "sultan_up") - Peluang Sultan Muncul Naik ---
     { msg: "Turnamen TCG Regional Dimulai! Pelanggan Sultan berdatangan hari ini.", type: "sultan_up" },
-    { msg: "Skandal Kartu Palsu Beredar! Kepercayaan pembeli turun drastis.", type: "crash" },
+    { msg: "Tanggal Tua/Muda? Bodo amat! Anak-anak Jaksel lagi hype pamer binder. Sultan is coming!", type: "sultan_up" },
+    { msg: "Komunitas 'Kolektor Kartu Elit' sedang gathering di dekat tokomu. Siapkan stok langka!", type: "sultan_up" },
+    { msg: "Bonus tahunan cair! Banyak pekerja kantoran tajir yang khilaf borong kartu hari ini.", type: "sultan_up" },
+
+    // --- EVENT BOOM (type: "boom") - Harga Pasar Cenderung Naik ---
     { msg: "Influencer review kartu Jadul! Permintaan pasar naik tiba-tiba.", type: "boom" },
-    { msg: "Pasar hari ini stabil dan tenang. Tidak ada kejadian khusus.", type: "normal" }
+    { msg: "Youtuber Gaming terkenal baru aja dapet kartu Legend pas live stream. Harga set ini meroket!", type: "boom" },
+    { msg: "Trend TikTok baru: Pamer koleksi kartu PSA 10! Semua orang mendadak jadi FOMO beli kartu.", type: "boom" },
+    { msg: "Pabrik TCG kehabisan bahan baku kertas foil! Kelangkaan ini bikin harga pasar naik drastis.", type: "boom" },
+    { msg: "Anime TCG season terbaru rilis! Anak-anak sekolahan pada nyari kartu karakter utamanya.", type: "boom" },
+
+    // --- EVENT CRASH (type: "crash") - Harga Pasar Cenderung Turun ---
+    { msg: "Skandal Kartu Palsu Beredar! Kepercayaan pembeli turun drastis, harga pasar anjlok.", type: "crash" },
+    { msg: "Pabrik baru aja ngumumin cetak ulang (Reprint) besar-besaran! Harga kartu lama langsung nyungsep.", type: "crash" },
+    { msg: "Drama di komunitas! Pro-player ketahuan curang, banyak kolektor kecewa dan pensiun main.", type: "crash" },
+    { msg: "Rumor beredar: Beberapa kartu overpowered bakal di-Banned dari turnamen. Kolektor panik jual murah!", type: "crash" },
+    { msg: "Hujan badai seharian di kota. Orang-orang malas keluar, pasar lesu dan sepi.", type: "crash" },
+
+    // --- EVENT NORMAL (type: "normal") - Tidak Ada Buff/Nerf ---
+    { msg: "Pasar hari ini stabil dan tenang. Tidak ada kejadian khusus.", type: "normal" },
+    { msg: "Cuaca cerah, angin sepoi-sepoi. Hari yang biasa dan damai untuk berjualan kartu.", type: "normal" },
+    { msg: "Berita hari ini: Kucing nyangkut di pohon. Tidak ada hubungannya dengan TCG.", type: "normal" },
+    { msg: "Tukang nasi goreng depan toko lagi rame. Penjualan kartu berjalan seperti biasa.", type: "normal" },
+    { msg: "Tidak ada gosip di komunitas hari ini. Lanjutkan rutinitas tokomu dengan santai.", type: "normal" }
 ];
 
 let state = {
+    activeAd: null,
+    queuedAd: null,
     time: 480, // 08:00 pagi (menit)
     isOpen: false,
     money: 300,
@@ -45,8 +95,8 @@ let state = {
     cardDatabase: [],
     marketPrices: {},
     marketTrends: {},
-    myPacks: { base: 0, fossil: 0, mega: 0 },
-    myItems: { sleeve: 0, kopi: 0, kaos: 0 },
+    myPacks: {}, 
+    myItems: {}, 
     customPrices: {},
     currentEvent: "normal",
     myCollection: [],
@@ -267,6 +317,8 @@ function preloadImages(cards) { cards.forEach(c => { if(c.imageUrl && !c.imageUr
 
 function saveGameState() {
     const dataToSave = {
+        activeAd: state.activeAd,
+        queuedAd: state.queuedAd,
         time: state.time,
         isOpen: state.isOpen,
         money: state.money,
@@ -370,7 +422,8 @@ function scheduleNextCustomer() {
 
     const collectionBuff = (state.myCollection?.length || 0) * 500;
     let baseInterval = state.currentEvent === "sultan_up" ? 5000 : 8000;
-    let interval = Math.max(1500, baseInterval - (state.staff.marketing * 1000) - collectionBuff);
+    let adSpeedBuff = state.activeAd === 'brosur' ? 2000 : 0;
+    let interval = Math.max(1500, baseInterval - (state.staff.marketing * 1000) - collectionBuff - adSpeedBuff);
 
     timers.customer = setTimeout(() => {
         spawnCustomer();
@@ -406,15 +459,26 @@ function updateMarketEconomy() {
 }
 
 function generateDailyEvent() {
-    if (Math.random() < 0.3) {
-        const ev = EVENTS[Math.floor(Math.random() * (EVENTS.length - 1))];
-        state.currentEvent = ev.type;
-        const eventText = document.getElementById('event-text');
-        if (eventText) eventText.innerText = ev.msg;
-        openModal('event-screen');
+    let ev = null;
+    
+    // CEK EFEK INFLUENCER
+    if (state.activeAd === 'influencer') {
+        const forcedEvents = EVENTS.filter(e => e.type === 'boom' || e.type === 'sultan_up');
+        ev = forcedEvents[Math.floor(Math.random() * forcedEvents.length)];
+        ev.msg = "📢 HASIL ENDORSE YOUTUBER:\n" + ev.msg; // Tambahkan label
+    } 
+    // JIKA TIDAK ADA INFLUENCER, NORMAL RANDOM
+    else if (Math.random() < 0.3) {
+        ev = EVENTS[Math.floor(Math.random() * (EVENTS.length - 1))];
     } else {
         state.currentEvent = "normal";
+        return; // Selesai, tidak ada pop-up event
     }
+
+    state.currentEvent = ev.type;
+    const eventText = document.getElementById('event-text');
+    if (eventText) eventText.innerText = ev.msg;
+    openModal('event-screen');
 }
 
 function closeEventScreen() { document.getElementById('event-screen').style.display = 'none'; }
@@ -498,6 +562,8 @@ function processNextDay() {
     state.dayCount++;
     state.time = 480; 
     state.isOpen = false;
+    state.activeAd = state.queuedAd;
+    state.queuedAd = null;
     
     const btnEndDay = document.getElementById('btn-end-day');
     if (btnEndDay) btnEndDay.style.display = 'none';
@@ -529,7 +595,8 @@ function recordSale(cardName, price, isOffline = false) {
 function spawnCustomer() {
     if (state.isBankrupt || !state.myInventory.length) return;
 
-    const maxCustomers = 3 + state.staff.marketing + (state.myCollection?.length || 0);
+    let adCapBuff = state.activeAd === 'brosur' ? 3 : 0;
+    const maxCustomers = 3 + state.staff.marketing + (state.myCollection?.length || 0) + adCapBuff;
     if (state.customers.length >= maxCustomers) return;
 
     let numItems = Math.min(Math.floor(Math.random() * 3) + 1, state.myInventory.length);
@@ -559,6 +626,38 @@ function spawnCustomer() {
         };
     });
 
+    // --- FITUR MIXED CART: TAMBAH ITEM/MERCH KE KERANJANG ---
+    // Cek Kaos (Peluang 30% jika ada stok)
+    if (state.myItems.kaos > 0 && Math.random() < 0.3) {
+        const itemData = AVAILABLE_ITEMS.find(i => i.id === 'kaos');
+        cart.push({
+            id: 'item_kaos_' + Date.now(),
+            itemId: 'kaos',
+            cardName: itemData.name,
+            displayName: `${itemData.icon} ${itemData.name}`,
+            isItem: true,
+            price: itemData.sellPrice
+        });
+        totalMarket += itemData.sellPrice;
+        trueMarketSum += itemData.sellPrice;
+    }
+
+    // Cek Kopi (Peluang 40% jika ada stok, lumayan buat nambah omset)
+    if (state.myItems.kopi > 0 && Math.random() < 0.4) {
+        const itemData = AVAILABLE_ITEMS.find(i => i.id === 'kopi');
+        cart.push({
+            id: 'item_kopi_' + Date.now(),
+            itemId: 'kopi',
+            cardName: itemData.name,
+            displayName: `${itemData.icon} ${itemData.name}`,
+            isItem: true,
+            price: itemData.sellPrice
+        });
+        totalMarket += itemData.sellPrice;
+        trueMarketSum += itemData.sellPrice;
+    }
+    // ---------------------------------------------------------
+
     // Skip jika harga terlalu tinggi
     if (totalMarket > trueMarketSum * 2.5 && Math.random() < 0.9) return;
 
@@ -580,6 +679,7 @@ function spawnCustomer() {
 
     let baseOffer = totalMarket * (1 + ((state.upgrades?.wallpaper || 0) * 0.05));
     if (state.staff.negotiator > 0) baseOffer *= (1 + state.staff.negotiator * 0.1);
+    if (state.activeAd === 'spg') baseOffer *= 1.10;
 
     let offerPrice = Math.max(1, Math.round(baseOffer * (Math.random() * 0.2 + 0.75)));
 
@@ -613,12 +713,15 @@ function processAutoCashier(customerId) {
     if (index === -1) return;
 
     const cust = state.customers[index];
-    const stillExists = cust.cart.every(ci => state.myInventory.some(inv => inv.id === ci.id));
+    const stillExists = cust.cart.every(ci => {
+        if (ci.isItem) return state.myItems[ci.itemId] > 0;
+        return state.myInventory.some(inv => inv.id === ci.id);
+    });
 
     if (stillExists) {
         executeSale(cust.cart, cust.name, cust.offerPrice, true);
     } else {
-        showToast(`Kasir: Transaksi batal, barang sudah terjual!`, 'error');
+        showToast(`Kasir: Transaksi batal, stok barang habis!`, 'error');
     }
 
     state.customers.splice(index, 1);
@@ -629,14 +732,53 @@ function acceptOffer(customerId) {
     const npcIndex = state.customers.findIndex(c => c.id === customerId); if(npcIndex === -1) return; 
     const npc = state.customers[npcIndex];
 
-    let stillExists = npc.cart.every(ci => state.myInventory.some(inv => inv.id === ci.id));
+    let stillExists = npc.cart.every(ci => {
+        if (ci.isItem) return state.myItems[ci.itemId] > 0;
+        return state.myInventory.some(inv => inv.id === ci.id);
+    });
+
     if(!stillExists) {
-        showToast(`Gagal: Barang di keranjang sudah laku/hilang!`, 'error');
+        showToast(`Gagal: Barang di keranjang sudah laku/habis!`, 'error');
         state.customers.splice(npcIndex, 1); updateUI(); return;
     }
 
     currentKasirCustomer = npc;
-    document.getElementById('kasir-items').innerHTML = npc.cart.map(i => `<div>- ${i.displayName}</div>`).join('');
+
+    // --- MULAI PERUBAHAN UI STRUK KASIR ---
+    
+    // 1. Hitung total harga asli dari seluruh barang di keranjang
+    let totalAsli = npc.cart.reduce((sum, item) => sum + item.price, 0);
+
+    // 2. Buat daftar list barangnya
+    let itemsHtml = npc.cart.map(i => `
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px; border-bottom: 1px dashed #555; padding-bottom: 4px;">
+            <span style="color: #ccc;">- ${i.displayName}</span>
+            <span style="color: #69F0AE; font-weight: bold;">$${i.price}</span>
+        </div>
+    `).join('');
+
+    // 3. Cek selisih harga (Bundle / Nego)
+    if (totalAsli !== npc.offerPrice) {
+        let selisih = totalAsli - npc.offerPrice;
+        let labelText = selisih > 0 ? "Diskon Bundle" : "Markup Sultan";
+        let labelColor = selisih > 0 ? "#FF5252" : "#69F0AE"; // Merah = diskon/rugi, Hijau = untung bayar lebih
+        let operatorSign = selisih > 0 ? '-' : '+';
+        
+        itemsHtml += `
+            <div style="display: flex; justify-content: space-between; font-size: 11px; margin-top: 8px; color: #888;">
+                <span>Subtotal:</span>
+                <span>$${totalAsli}</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 8px; border-bottom: 1px solid #666; padding-bottom: 4px; color: ${labelColor};">
+                <span>${labelText}:</span>
+                <span style="font-weight: bold;">${operatorSign}$${Math.abs(selisih)}</span>
+            </div>
+        `;
+    }
+
+    document.getElementById('kasir-items').innerHTML = itemsHtml;
+    // --- AKHIR PERUBAHAN UI STRUK KASIR ---
+
     document.getElementById('kasir-total').innerText = `$${npc.offerPrice}`;
     document.getElementById('kasir-input').value = '';
     
@@ -696,8 +838,12 @@ function processKasir() {
         if (inputVal !== npc.offerPrice) { showToast(`❌ Nominal EDC salah! Harus ketik $${npc.offerPrice}`, "error"); return; }
     }
 
-    let stillExists = npc.cart.every(ci => state.myInventory.some(inv => inv.id === ci.id));
-    if(!stillExists) { showToast(`Transaksi batal, barang sudah tidak ada.`, 'error'); } 
+    let stillExists = npc.cart.every(ci => {
+        if (ci.isItem) return state.myItems[ci.itemId] > 0;
+        return state.myInventory.some(inv => inv.id === ci.id);
+    });
+
+    if(!stillExists) { showToast(`Transaksi batal, barang sudah tidak ada/stok habis.`, 'error'); } 
     else {
         executeSale(npc.cart, npc.name, npc.offerPrice, false);
         state.repPoints = Math.min(100, state.repPoints + 5);
@@ -712,31 +858,44 @@ function processKasir() {
 function executeSale(cart, npcName, totalPrice, byCashier = false) {
     state.money += totalPrice;
 
-    const itemIds = cart.map(i => i.id);
-    state.myInventory = state.myInventory.filter(i => !itemIds.includes(i.id));
+    // Pisahkan mana kartu dan mana item biasa
+    const cardItems = cart.filter(i => !i.isItem);
+    const merchItems = cart.filter(i => i.isItem);
 
-    cart.forEach(item => {
-        const cardData = state.cardDatabase.find(c => c.name === item.cardName);
-        
-        // Sleeve auto sell
-        if (cardData && (cardData.rarity?.includes('Rare') || cardData.rarity?.includes('Holo')) 
-            && state.myItems.sleeve > 0 && Math.random() < 0.5) {
-            state.myItems.sleeve--;
-            state.money += 2;
-            setTimeout(() => showToast(`🛡️ ${npcName} tambah beli Sleeve! +$2`, 'success'), 800);
-        }
+    // 1. Kurangi stok KARTU dari myInventory
+    const cardIds = cardItems.map(i => i.id);
+    state.myInventory = state.myInventory.filter(i => !cardIds.includes(i.id));
 
-        recordSale(item.cardName, Math.round(totalPrice / cart.length));
-
-        const itemKey = item.cardName + (item.grade ? `_G${item.grade}` : '');
-        if (!state.myInventory.some(i => 
-            (i.cardName + (i.grade ? `_G${i.grade}` : '')) === itemKey)) {
-            delete state.customPrices[itemKey];
+    // 2. Kurangi stok MERCH dari myItems
+    merchItems.forEach(merch => {
+        if (state.myItems[merch.itemId] > 0) {
+            state.myItems[merch.itemId]--;
         }
     });
 
+    // 3. Rekap Penjualan & Sleeve Otomatis (Hanya untuk Kartu)
+    cart.forEach(item => {
+        if (!item.isItem) {
+            const cardData = state.cardDatabase.find(c => c.name === item.cardName);
+            // Sleeve auto sell untuk kartu Rare/Holo
+            if (cardData && (cardData.rarity?.includes('Rare') || cardData.rarity?.includes('Holo')) 
+                && state.myItems.sleeve > 0 && Math.random() < 0.5) {
+                state.myItems.sleeve--;
+                state.money += 2;
+                setTimeout(() => showToast(`🛡️ ${npcName} tambah beli Sleeve! +$2`, 'success'), 800);
+            }
+
+            const itemKey = item.cardName + (item.grade ? `_G${item.grade}` : '');
+            if (!state.myInventory.some(i => (i.cardName + (i.grade ? `_G${i.grade}` : '')) === itemKey)) {
+                delete state.customPrices[itemKey];
+            }
+        }
+        
+        recordSale(item.cardName, Math.round(totalPrice / cart.length));
+    });
+
     playSound('sfx-coin');
-    const summary = cart.length > 1 ? `${cart.length} Item` : cart[0]?.displayName;
+    const summary = cart.length > 1 ? `${cart.length} Item` : cart?.displayName;
     
     showToast(byCashier 
         ? `🧑‍💼 Kasir: ${npcName} beli ${summary} ($${totalPrice})` 
@@ -799,10 +958,16 @@ function updateUI() {
     if (btnStream) {
         if (state.stream.isLiveMode) {
             btnStream.classList.add('active');
-            btnStream.innerHTML = `<span>🔴</span>Live: ON`;
+            // Format HTML baru (Live ON)
+            btnStream.innerHTML = `
+                <div class="icon-box" style="background: linear-gradient(135deg, rgba(233, 30, 99, 0.7), rgba(233, 30, 99, 0.2)); border-color: #E91E63;">🔴</div>
+                <div class="icon-text">Live: ON</div>`;
         } else {
             btnStream.classList.remove('active');
-            btnStream.innerHTML = `<span>📡</span>Live: OFF`;
+            // Format HTML baru (Live OFF)
+            btnStream.innerHTML = `
+                <div class="icon-box">📡</div>
+                <div class="icon-text">Live: OFF</div>`;
         }
     }
     const streamStats = document.getElementById('ui-stream-stats');
@@ -1493,6 +1658,7 @@ function refreshCurrentApp() {
     if(currentOpenApp === 'analytics') openAppAnalytics(); if(currentOpenApp === 'settings') openAppSettings();
     if(currentOpenApp === 'admin_pin') showAdminPinScreen();
     if(currentOpenApp === 'admin') openAppAdminPanel();
+    if(currentOpenApp === 'marketing') openAppMarketing();
 }
 
 function buyItem(id, price, qty) { if(state.money >= price) { state.money -= price; state.myItems[id] = (state.myItems[id] || 0) + qty; playSound('sfx-coin'); showToast(`📦 Berhasil kulakan barang!`, 'success'); saveGameState(); } }
@@ -1915,4 +2081,61 @@ function customConfirm(message, title = "Konfirmasi") {
             resolve(false);
         };
     });
+}
+
+const MARKETING_ADS = [
+    { id: 'brosur', name: 'Sebar Brosur di Warnet', cost: 150, desc: 'Besok toko auto-rame! Maksimal antrean pelanggan +3 dan datang lebih cepat.', icon: '📄' },
+    { id: 'spg', name: 'Sewa SPG Cantik', cost: 500, desc: 'Besok pelanggan rela bayar lebih mahal! Tawaran awal naik otomatis +10%.', icon: '💃' },
+    { id: 'influencer', name: 'Endorse YouTuber Gaming', cost: 1500, desc: 'Besok PASTI terjadi event Boom (Harga Naik) atau Sultan Datang!', icon: '📱' }
+];
+
+function openAppMarketing() {
+    currentOpenApp = 'marketing';
+    let html = `<div style="margin-bottom: 16px; padding: 12px; background: #37474F; border-radius: 8px; text-align: left;"><p style="font-size: 11px; color: #ccc; margin-bottom: 0;">Beli paket kampanye hari ini, efeknya akan aktif <b>BESOK</b> (selama 1 hari penuh). Hanya bisa antre 1 iklan per hari!</p></div>`;
+
+    if (state.activeAd) {
+        const active = MARKETING_ADS.find(a => a.id === state.activeAd);
+        if (active) {
+            html += `<div style="background: rgba(105, 240, 174, 0.2); border: 1px solid #69F0AE; padding: 10px; border-radius: 8px; margin-bottom: 16px; text-align: center;">
+                <div style="color: #69F0AE; font-weight: bold; font-size: 12px; margin-bottom: 4px;">🟢 Kampanye Berjalan Hari Ini:</div>
+                <div style="font-size: 14px; color: white;">${active.icon} ${active.name}</div>
+            </div>`;
+        }
+    }
+
+    MARKETING_ADS.forEach(ad => {
+        const isQueued = state.queuedAd === ad.id;
+        const canBuy = state.money >= ad.cost && !state.queuedAd;
+        
+        let btnHtml = '';
+        if (isQueued) {
+            btnHtml = `<button class="btn btn-full" style="background: var(--green); padding: 8px;" disabled>✅ Terjadwal untuk Besok</button>`;
+        } else if (state.queuedAd) {
+            btnHtml = `<button class="btn btn-full" style="background: #555; padding: 8px;" disabled>Menunggu Antrean</button>`;
+        } else {
+            btnHtml = `<button class="btn btn-full" style="background: ${canBuy ? 'var(--purple)' : '#555'}; padding: 8px;" ${!canBuy?'disabled':''} onclick="buyMarketing('${ad.id}', ${ad.cost})">Beli Kampanye ($${ad.cost})</button>`;
+        }
+
+        html += `
+        <div style="margin-bottom: 12px; padding: 12px; background: #2C3E50; border-radius: 8px; border-left: 4px solid var(--purple); text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <strong style="color: white; font-size: 14px;">${ad.icon} ${ad.name}</strong>
+            </div>
+            <p style="font-size: 11px; color: #aaa; margin-bottom: 8px;">${ad.desc}</p>
+            ${btnHtml}
+        </div>`;
+    });
+
+    openComputerView('📢 Marketing & Ads', html);
+}
+
+function buyMarketing(id, cost) {
+    if (state.money >= cost) {
+        state.money -= cost;
+        state.queuedAd = id;
+        playSound('sfx-coin');
+        showToast("Kampanye dibeli! Efek akan aktif besok pagi.", "success");
+        saveGameState();
+        openAppMarketing();
+    }
 }

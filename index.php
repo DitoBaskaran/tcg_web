@@ -113,23 +113,64 @@
                             <button class="close-btn" id="btn-back-desktop" onclick="showDesktop()" style="color: white; text-shadow: none; display: none;">🔙</button>
                         </div>
                         <div class="computer-content-area" style="position: relative; flex: 1; overflow: hidden; background: #008080;">
-                            <div class="computer-desktop" id="computer-desktop">
-                                <div class="desktop-icon btn-grosir" onclick="openAppGrosir()"><span>🛒</span>Grosir</div>
-                                <div class="desktop-icon btn-tas" onclick="openAppTas()"><span>🎒</span>Tas Card</div>
-                                <div class="desktop-icon btn-trade" onclick="openAppTrade()"><span>♻️</span>Trade-In</div>
-                                <div class="desktop-icon btn-grading" onclick="openAppGrading()"><span>🔍</span>Grading</div>
-                                <div class="desktop-icon btn-staff" onclick="openAppStaff()"><span>👥</span>Staff</div>
-                                <div class="desktop-icon btn-bank" onclick="openAppBank()"><span>🏦</span>Bank</div>
-                                <div class="desktop-icon btn-bills" style="position: relative;" onclick="openAppBills()">
-                                    <span id="badge-bills" style="position:absolute; top:-5px; right:-5px; background:#F44336; color:white; font-size:9px; padding:2px 6px; border-radius:10px; display:none; font-weight:bold; border: 1px solid white; z-index: 10;">!</span>
-                                    <span>📜</span>Tagihan
-                                </div>
-                                <div class="desktop-icon btn-renov" onclick="openAppRenov()"><span>🏪</span>Renovasi</div>
-                                <div class="desktop-icon btn-analytics" onclick="openAppAnalytics()"><span>📊</span>Data</div>
-                                <div class="desktop-icon btn-setting" onclick="openAppSettings()"><span>⚙️</span>Setting</div>
-                                <div class="desktop-icon btn-stream" id="btn-toggle-stream" onclick="toggleStreamMode()"><span>📡</span>Live: OFF</div>
+                            <div class="computer-desktop-grid" id="computer-desktop">
+                                
+                                <button class="app-icon-modern" onclick="openAppGrosir()">
+                                    <div class="icon-box">🛒</div><div class="icon-text">Grosir</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppTas()">
+                                    <div class="icon-box">🎒</div><div class="icon-text">Tas Card</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppTrade()">
+                                    <div class="icon-box">♻️</div><div class="icon-text">Trade-In</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppGrading()">
+                                    <div class="icon-box">🔍</div><div class="icon-text">Grading</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppStaff()">
+                                    <div class="icon-box">👥</div><div class="icon-text">Staff</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppBank()">
+                                    <div class="icon-box">🏦</div><div class="icon-text">Bank</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppBills()">
+                                    <div class="icon-box">
+                                        <span id="badge-bills">!</span>
+                                        📜
+                                    </div>
+                                    <div class="icon-text">Tagihan</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppMarketing()">
+                                    <div class="icon-box">📢</div>
+                                    <div class="icon-text">Marketing</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppRenov()">
+                                    <div class="icon-box">🏪</div><div class="icon-text">Renovasi</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppAnalytics()">
+                                    <div class="icon-box">📊</div><div class="icon-text">Data</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" onclick="openAppSettings()">
+                                    <div class="icon-box">⚙️</div><div class="icon-text">Setting</div>
+                                </button>
+                                
+                                <button class="app-icon-modern" id="btn-toggle-stream" onclick="toggleStreamMode()">
+                                    <div class="icon-box">📡</div><div class="icon-text">Live: OFF</div>
+                                </button>
+
                             </div>
-                            <div class="computer-app" id="computer-app" style="display: none; height: 100%; overflow-y: auto; padding: 12px; background: #263238; color: white;">
+
+                            <div class="computer-app" id="computer-app" style="display: none; height: 100%; overflow-y: auto; padding: 16px; background: #263238; color: white; box-sizing: border-box;">
                             </div>
                         </div>
                     </div>

@@ -35,6 +35,79 @@ body {
 /* Sembunyikan scrollbar bawaan browser agar terasa seperti aplikasi native mobile */
 ::-webkit-scrollbar { width: 0px; height: 0px; display: none; }
 
+.computer-desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    gap: 20px;
+    padding: 25px;
+    align-content: start;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.app-icon-modern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.app-icon-modern:hover {
+    transform: translateY(-4px) scale(1.05);
+    filter: brightness(1.2);
+}
+
+.app-icon-modern .icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05));
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    position: relative;
+}
+
+.app-icon-modern .icon-text {
+    font-size: 11px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+
+/* Styling khusus untuk Badge Tagihan agar melingkar sempurna */
+#badge-bills {
+    position: absolute; 
+    top: -6px; 
+    right: -6px; 
+    background: #FF5252; 
+    color: white; 
+    font-size: 10px; 
+    min-width: 18px; 
+    height: 18px; 
+    display: none; /* diatur oleh JS */
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    font-weight: bold; 
+    border: 2px solid #008080; 
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
 /* ─── LOADING & EVENT SCREEN ─── */
 #splash-screen { position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at top, #2C3E50 0%, #0B0E14 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 6000; }
 .game-logo { font-size: 42px; font-weight: 900; color: #FFD54F; text-shadow: 0 6px 0 #F57F17, 0 10px 15px rgba(0,0,0,0.8); margin-bottom: 20px; font-family: 'Arial Black', sans-serif; text-align: center; animation: floatLogo 3s ease-in-out infinite; letter-spacing: 2px; line-height: 1; }
